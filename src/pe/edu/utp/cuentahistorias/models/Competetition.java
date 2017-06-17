@@ -3,24 +3,24 @@ package pe.edu.utp.cuentahistorias.models;
 /**
  * Created by will on 17/06/2017.
  */
-public class Comentary {
-    private String description;
+public class Competetition {
+    private int id;
     private Subscription subscription;
 
-    public Comentary() {
+    public Competetition() {
     }
 
-    public Comentary(String description, Subscription subscription) {
-        this.setDescription(description);
+    public Competetition(int id, Subscription subscription) {
+        this.setId(id);
         this.setSubscription(subscription);
     }
 
-    public String getDescription() {
-        return description;
+    public int getId() {
+        return id;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Subscription getSubscription() {
@@ -31,3 +31,4 @@ public class Comentary {
         this.subscription = subscription;
     }
 }
+
