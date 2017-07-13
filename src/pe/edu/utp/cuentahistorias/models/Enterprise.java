@@ -16,6 +16,7 @@ public class Enterprise {
         this.setId(id);
         this.setRuc(ruc);
         this.setCategory(category);
+
     }
 
     public int getId() {
@@ -43,6 +44,3 @@ public class Enterprise {
     }
 
 }
-
-
-
