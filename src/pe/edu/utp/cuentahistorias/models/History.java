@@ -5,6 +5,7 @@ import java.awt.*;
 /**
  * Created by will on 17/06/2017.
  */
+
 public class History {
     private int id;
     private String title;
@@ -15,7 +16,6 @@ public class History {
     private String link;
     private String like;
     private String dislike;
-
 
     public History() {
     }
@@ -31,9 +31,7 @@ public class History {
         this.setLink(link);
         this.setLike(like);
         this.setDislike(dislike);
-
     }
-
 
     public int getId() {
         return id;
