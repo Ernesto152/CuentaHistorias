@@ -1,7 +1,6 @@
 package pe.edu.utp.cuentahistorias.models;
 
 import java.awt.*;
-import java.util.Date;
 
 /**
  * Created by will on 17/06/2017.
@@ -9,10 +8,10 @@ import java.util.Date;
 public class History {
     private int id;
     private String title;
-    private Date piblicationDate;
+    private String publicationstate;
     private String description;
     private Image image;
-    private Subscription subscription;
+    private String subscription;
     private String link;
     private String like;
     private String dislike;
@@ -20,17 +19,20 @@ public class History {
     public History() {
     }
 
-    public History(int id, String title, Date piblicationDate, String description, Image image, Subscription subscription, String link, String like, String dislike) {
+    public History(int id, String title, String publicationstate, String description, Image image, String link, String like, String dislike, String subscription) {
+
         this.setId(id);
         this.setTitle(title);
-        this.setPiblicationDate(piblicationDate);
+        this.setPublicationstate(publicationstate);
         this.setDescription(description);
         this.setImage(image);
         this.setSubscription(subscription);
         this.setLink(link);
         this.setLike(like);
         this.setDislike(dislike);
+
     }
+
 
     public int getId() {
         return id;
@@ -48,12 +50,12 @@ public class History {
         this.title = title;
     }
 
-    public Date getPiblicationDate() {
-        return piblicationDate;
+    public String getPublicationstate() {
+        return publicationstate;
     }
 
-    public void setPiblicationDate(Date piblicationDate) {
-        this.piblicationDate = piblicationDate;
+    public void setPublicationstate(String publicationstate) {
+        this.publicationstate = publicationstate;
     }
 
     public String getDescription() {
@@ -72,11 +74,11 @@ public class History {
         this.image = image;
     }
 
-    public Subscription getSubscription() {
+    public String getSubscription() {
         return subscription;
     }
 
-    public void setSubscription(Subscription subscription) {
+    public void setSubscription(String subscription) {
         this.subscription = subscription;
     }
 
