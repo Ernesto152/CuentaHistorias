@@ -16,6 +16,7 @@ public class History {
     private String like;
     private String dislike;
 
+
     public History() {
     }
 
