@@ -11,10 +11,6 @@ public class BaseEntity {
     private static String BASE_QUERY = "SELECT * FROM ";
     private String tableName;
 
-    public BaseEntity(Connection connection) {
-        this.setConnection(connection);
-    }
-
     public BaseEntity(Connection connection, String tableName) {
         this.setConnection(connection);
         this.setTableName(tableName);
