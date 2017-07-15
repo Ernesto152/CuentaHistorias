@@ -7,11 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 
 <html>
-<head><title>CuentaHistorias</title>
+<head>
+    <title>CuentaHistorias</title>
 </head>
 <body>
 <b:container>
@@ -21,28 +24,15 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="container" id="container">
-                <form id="contact" action="" method="post">
+                <s:form action="user" id="contact">
                     <h3>Regístrate</h3>
-                    <h4>Únete a nosotros y monitorea tu dinero</h4>
-                    <fieldset>
-                        <input placeholder="Nombre" type="text" tabindex="1" required autofocus>
-                    </fieldset>
-                    <fieldset>
-                        <input placeholder="Apellidos" type="text" tabindex="2" required autofocus>
-                    </fieldset>
-                    <fieldset>
-                        <input placeholder="Correo electrónico" type="email" tabindex="3" required>
-                    </fieldset>
-                    <fieldset>
-                        <input placeholder="Contraseña" type="password" tabindex="4" required>
-                    </fieldset>
-                    <fieldset>
-                        <input placeholder="Confirmar contraseña" type="password" tabindex="5" required>
-                    </fieldset>
-                    <fieldset>
-                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Registrarme</button>
-                    </fieldset>
-                </form>
+                    <h4>Únete a nosotros y experimenta</h4>
+                    <s:textfield placeholder="Nombre" name="firstName"/>
+                    <s:textfield placeholder="Apellidos" name="lastName"/>
+                    <s:textfield placeholder="Correo electrónico" name="email" type="email"/>
+                    <s:password placeholder="Contraseña" name="password" type="password"/>
+                    <s:submit cssClass="btn btn-primary" value="Registrarme"/>
+                </s:form>
             </div>
         </div>
     </div>

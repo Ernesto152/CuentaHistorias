@@ -1,6 +1,7 @@
 package pe.edu.utp.cuentahistorias.services;
 
 import pe.edu.utp.cuentahistorias.models.CHDataStore;
+import pe.edu.utp.cuentahistorias.models.User;
 import pe.edu.utp.cuentahistorias.models.Word;
 
 import javax.naming.InitialContext;
@@ -50,6 +51,10 @@ public class CHService {
     }
 
     /*--------------------------------------------------------------*/
+    public boolean createUser(User user){
+        return getDataStore().createUser(user);
+    }
+
     public List<Word> getWords(){
         return getDataStore().findAllWords();
     }

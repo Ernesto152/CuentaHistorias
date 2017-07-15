@@ -59,6 +59,7 @@ public class UsersEntity extends BaseEntity {
         return null;
     }
 
+    /*
     public boolean add(User user){
         String sql = "INSERT INTO users(id, first_name, last_name, email, password, subscription_start, subscription_renovation, subscription_id, enterprise_id)" +
                 " VALUES(" +
@@ -73,4 +74,25 @@ public class UsersEntity extends BaseEntity {
                     user.getEnterprise().getIdAsString() + ")";
         return change(sql);
     }
+     */
+
+    public boolean add(User user){
+        String sql = "INSERT INTO users(first_name, last_name, email, password, subscription_start, subscription_renovation, subscription_id, enterprise_id)" +
+                " VALUES(" +
+                    user.getFirstNameAsValue() + ", " +
+                    user.getLastNameAsValue() + ", " +
+                    user.getEmailAsValue() + ", " +
+                    user.getPasswordAsValue() + ", " +
+                    "CURDATE(), " +
+                    "DATE_ADD(CURDATE(), INTERVAL 180 DAY), " +
+                    "1, " +
+                    "NULL)";
+        return change(sql);
+    }
+
+    /*
+    INSERT INTO
+    users(first_name, last_name, email, password, subscription_start, subscription_renovation, subscription_id, enterprise_id)
+    VALUES('Sheyla', 'Berrocal', 'sheylaberrocal@gmail.com', '12345', CURDATE(), DATE_ADD(CURDATE(), INTERVAL 180 DAY), 1, NULL)
+     */
 }

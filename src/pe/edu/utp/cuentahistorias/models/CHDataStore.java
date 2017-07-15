@@ -9,6 +9,7 @@ import java.util.List;
 public class CHDataStore {
     private Connection connection;
     private WordsEntity wordsEntity;
+    private UsersEntity usersEntity;
 
     public CHDataStore(Connection connection) {
         this.connection = connection;
@@ -24,6 +25,17 @@ public class CHDataStore {
     public CHDataStore setConnection(Connection connection) {
         this.connection = connection;
         return this;
+    }
+
+    private UsersEntity getUsersEntity(){
+        if (usersEntity == null){
+            usersEntity = new UsersEntity(getConnection());
+        }
+        return usersEntity;
+    }
+
+    public boolean createUser(User user){
+        return getUsersEntity().add(user);
     }
 
     private WordsEntity getWordsEntity(){

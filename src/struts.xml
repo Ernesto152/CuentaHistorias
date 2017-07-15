@@ -15,5 +15,10 @@
             <result name="success">welcome.jsp</result>
             <result name="error">pruebaStrutsWord.jsp</result>
         </action>
+
+        <action name="user" class="pe.edu.utp.cuentahistorias.actions.UserAction">
+            <result name="success">index.jsp</result>
+            <result name="error">signup.jsp</result>
+        </action>
     </package>
 </struts>

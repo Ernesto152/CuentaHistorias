@@ -12,6 +12,6 @@
     <title>Welcome</title>
 </head>
 <body>
-    <p>La palabra <s:property value="name"/> ha sido registrada</p>
+    <p>El usuario <s:property value="firstName"/> ha sido registrado</p>
 </body>
 </html>
