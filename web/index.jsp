@@ -30,8 +30,8 @@
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Crea</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                    <p>Demuestra tu creatividad creando todas las historias que quieras. Empieza a divertirte.</p>
+                    <p><a class="btn btn-lg btn-primary" href="signup.jsp" role="button">Regístrate ahora</a></p>
 
                 </div>
             </div>
@@ -41,8 +41,8 @@
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Lee</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <p>Los amantes por la lectura nos prefieren, regístrate y ve sus historias.</p>
+                    <p><a class="btn btn-lg btn-primary" href="signup.jsp" role="button">Regístrate ahora</a></p>
                 </div>
             </div>
         </div>
@@ -51,8 +51,8 @@
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Compite</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                    <p>Demuestra que puedes crear historias mejor que cualquiera. Confiamos en ti</p>
+                    <p><a class="btn btn-lg btn-primary" href="signup.jsp" role="button">Regístrate ahora</a></p>
                 </div>
             </div>
         </div>
@@ -80,19 +80,19 @@
                 <img class="img-circle" src="img/icoescr.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Crea</h2>
                 <p>En esta sección podrás plasmar tu imaginación en la web, te brindaremos palabras la cual deberás utilizar en tus oraciones, y asi darles un sentido a tu historia </p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default" href="write.jsp" role="button">Ir &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="img-circle" src="img/icolee.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Lee</h2>
                 <p> Como todo buen lector que eres, hemos puesto a tu disposión este apartado para que puedas cautivarte con las creaciones de tus colegas.</p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default" href="stories.jsp" role="button">Ir &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="img-circle" src="img/icocomp.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Compite</h2>
                 <p>Ahora podras retar a todos los creadores demostrando que tus habilidades pueden super a cualquiera, no te limites y deja volar tu imaginación.</p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default" href="#" role="button">Ir &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 

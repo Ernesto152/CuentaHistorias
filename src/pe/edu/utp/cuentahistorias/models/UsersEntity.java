@@ -77,7 +77,8 @@ public class UsersEntity extends BaseEntity {
      */
 
     public boolean add(User user){
-        String sql = "INSERT INTO users(first_name, last_name, email, password, subscription_start, subscription_renovation, subscription_id, enterprise_id)" +
+        String sql = "INSERT INTO users(first_name, last_name, email, password, subscription_start, " +
+                "subscription_renovation, subscription_id, enterprise_id)" +
                 " VALUES(" +
                     user.getFirstNameAsValue() + ", " +
                     user.getLastNameAsValue() + ", " +

@@ -16,8 +16,8 @@
 <body>
 <b:container>
     <b:jumbotron title="Sample">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <h1>Cuéntanos una historia</h1>
+        <p>Exterioriza tu creatividad, y con el conjunto de palabras que te asignamos, cuéntanos una historia.</p>
     </b:jumbotron>
 </b:container>
 <b:container>
@@ -29,17 +29,17 @@
                         <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="80" height="80">
                     </p>
                     <p>
-                        <strong>Author, Author</strong>
+                        <strong>Ernesto Chira Torres</strong>
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
                     <div>
                         <h4>
-                            <span class="label label-primary">Palabra 1</span>
-                            <span class="label label-primary">Palabra 2</span>
-                            <span class="label label-primary">Palabra 3</span>
-                            <span class="label label-primary">Palabra 4</span>
-                            <span class="label label-primary">Palabra 5</span>
+                            <span class="label label-primary">auto</span>
+                            <span class="label label-primary">cafe</span>
+                            <span class="label label-primary">amigos</span>
+                            <span class="label label-primary">wifi</span>
+                            <span class="label label-primary">comida</span>
                         </h4>
                     </div>
                     <div class="panel panel-primary">

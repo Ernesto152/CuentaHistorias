@@ -8,13 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 
 <html>
 <head>
     <title>CuentaHistorias</title>
+
 </head>
 <body>
 <b:container>

@@ -103,7 +103,8 @@ public class UserAction {
     }
 
     public String execute(){
-        user = new User(id, firstName, lastName, email, password, subscriptionStart, subscriptionRenovation, subscription, enterprise);
+        user = new User(id, firstName, lastName, email, password, subscriptionStart, subscriptionRenovation,
+                subscription, enterprise);
         try {
             CHService service = new CHService();
             service.createUser(user);
