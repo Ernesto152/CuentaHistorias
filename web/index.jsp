@@ -10,7 +10,7 @@
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 <html>
-<head><title>CuentaHistorias</title>
+<head><tittle>CuentaHistorias</tittle>
 </head>
 <body>
 <!---->

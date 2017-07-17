@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>List Words</title>
+    <tittle>List Words</tittle>
 </head>
 <body>
     <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>

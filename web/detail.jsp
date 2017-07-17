@@ -11,7 +11,7 @@
 <jsp:include page="navbar.jsp"/>
 
 <html>
-<head><title>CuentaHistorias</title></head>
+<head><tittle>CuentaHistorias</tittle></head>
 <body>
 <b:container>
     <div class="row" style="padding-top: 40px ">

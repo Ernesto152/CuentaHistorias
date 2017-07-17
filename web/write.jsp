@@ -7,15 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 <html>
 <head>
-    <title>CuentaHistorias</title>
+    <tittle>CuentaHistorias</tittle>
 </head>
 <body>
 <b:container>
-    <b:jumbotron title="Sample">
+    <b:jumbotron tittle="Sample">
         <h1>Navbar example</h1>
         <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
     </b:jumbotron>
@@ -55,9 +56,21 @@
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
+
                                 Título: <input type="text" class="form-control" placeholder="¿Cómo desea titular su historia?">
                                 <br>
-                                <textarea class="form-control" rows="5" placeholder="Empieza aquí..."></textarea>
+                                <div class="container" id="container">
+                                    <s:form action="story" id="story">
+                                        <s:textfield name="title" />
+                                        <s:textfield name="description" />
+
+                                        <s:submit cssClass="btn btn-primary" value="regis"/>
+                                    </s:form>
+                                </div>
+                                <textarea class="form-control" rows="5" placeholder="Empieza aquí...">
+
+                                </textarea>
+
                             </div>
                         </div>
                     </div>

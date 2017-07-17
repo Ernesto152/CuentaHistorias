@@ -1,5 +1,7 @@
 package pe.edu.utp.cuentahistorias.models;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 
 /**
@@ -7,7 +9,7 @@ import java.util.Date;
  */
 public class Story {
     private int id;
-    private String title;
+    private String tittle;
     private String description;
     private Date publicationDate;
     private String imageUrl;
@@ -18,9 +20,9 @@ public class Story {
     public Story() {
     }
 
-    public Story(int id, String title, String description, Date publicationDate, String imageUrl, int like, int dislike, User user) {
+    public Story(int id, String tittle, String description, Date publicationDate, String imageUrl, int like, int dislike, User user) {
         this.id = id;
-        this.title = title;
+        this.tittle = tittle;
         this.description = description;
         this.publicationDate = publicationDate;
         this.imageUrl = imageUrl;
@@ -38,12 +40,12 @@ public class Story {
         return this;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTittle() {
+        return tittle;
     }
 
-    public Story setTitle(String title) {
-        this.title = title;
+    public Story setTittle(String tittle) {
+        this.tittle = tittle;
         return this;
     }
 
@@ -99,5 +101,21 @@ public class Story {
     public Story setUser(User user) {
         this.user = user;
         return this;
+    }
+    public static Story build(ResultSet resultSet, UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
+        try {
+            return (new Story())
+                    .setId(resultSet.getInt("id"))
+                    .setTittle(resultSet.getString("title"))
+                    .setDescription(resultSet.getString("description"))
+                    .setPublicationDate(resultSet.getDate("publication_date"))
+                    .setImageUrl(resultSet.getString("image_url"))
+                    .setLike(resultSet.getInt("like"))
+                    .setDislike(resultSet.getInt("dislike"))
+                    .setUser(usersEntity.findById(resultSet.getInt(""),subscriptionsEntity, enterprisesEntity));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

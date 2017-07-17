@@ -7,7 +7,7 @@ import java.sql.SQLException;
 /**
  * Created by usuario on 17/06/2017.
  */
-public class User {
+public class    User {
     private int id;
     private String firstName;
     private String lastName;
