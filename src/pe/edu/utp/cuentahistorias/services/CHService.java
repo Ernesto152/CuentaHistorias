@@ -60,8 +60,13 @@ public class CHService {
     public boolean createWord(Word word){
         return getDataStore().createWord(word);
     }
+
+    /*
+    public boolean createWord(Word word){
+        return getWordsEntity().add(word);
+    }
+     */
     public boolean createStory(Story story){
         return getDataStore().createStory(story);
     }
-
 }

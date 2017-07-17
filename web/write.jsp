@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 <html>
@@ -57,7 +58,14 @@
                             <div class="form-group">
                                 Título: <input type="text" class="form-control" placeholder="¿Cómo desea titular su historia?">
                                 <br>
-                                <textarea class="form-control" rows="5" placeholder="Empieza aquí..."></textarea>
+                                <div class="container" id="container">
+                                    <s:form action="story" id="story">
+                                        <s:textfield name="title" />
+                                        <s:textfield name="description" />
+
+                                        <s:submit cssClass="btn btn-primary" value="regis"/>
+                                    </s:form>
+                                </div>
                             </div>
                         </div>
                     </div>
