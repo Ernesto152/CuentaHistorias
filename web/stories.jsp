@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 
@@ -40,9 +41,8 @@
                     </div></a>
                     <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                         <div class="caption">
-                            <h3>Título</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua...</p>
+                            <h3><s:property value="title" /></h3>
+                            <p><s:property value="description" /> </p>
                             <p>
                                 <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
                                 <strong>Author, Author</strong>
@@ -61,9 +61,8 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                         <div class="caption">
-                            <h3>Título</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua...</p>
+                            <h3><s:property value="title" /></h3>
+                            <p><s:property value="description" /> </p>
                             <p>
                                 <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
                                 <strong>Author, Author</strong>

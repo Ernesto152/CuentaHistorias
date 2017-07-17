@@ -57,19 +57,21 @@
                         <div class="panel-body">
                             <div class="form-group">
 
-                                Título: <input type="text" class="form-control" placeholder="¿Cómo desea titular su historia?">
+                                <%--Título: <input type="text" class="form-control" placeholder="¿Cómo desea titular su historia?">--%>
                                 <br>
                                 <div class="container" id="container">
                                     <s:form action="story" id="story">
-                                        <s:textfield name="title" />
-                                        <s:textfield name="description" />
+                                        <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" />
+                                        <s:textarea name="description" class="form-control" rows="5" />
 
-                                        <s:submit cssClass="btn btn-primary" value="regis"/>
+                                        <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary"/>
                                     </s:form>
                                 </div>
-                                <textarea class="form-control" rows="5" placeholder="Empieza aquí...">
-
-                                </textarea>
+                                <%--<textarea class="form-control" rows="5" placeholder="Empieza aquí...">
+<%--<textarea class="form-control" rows="5" placeholder="Empieza aquí...">
+<%--<textarea class="form-control" rows="5" placeholder="Empieza aquí...">
+<%--<textarea class="form-control" rows="5" placeholder="Empieza aquí...">
+                                </textarea>--%>
 
                             </div>
                         </div>
