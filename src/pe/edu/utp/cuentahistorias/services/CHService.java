@@ -1,8 +1,6 @@
 package pe.edu.utp.cuentahistorias.services;
 
-import pe.edu.utp.cuentahistorias.models.CHDataStore;
-import pe.edu.utp.cuentahistorias.models.User;
-import pe.edu.utp.cuentahistorias.models.Word;
+import pe.edu.utp.cuentahistorias.models.*;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -62,4 +60,8 @@ public class CHService {
     public boolean createWord(Word word){
         return getDataStore().createWord(word);
     }
+    public boolean createStory(Story story){
+        return getDataStore().createStory(story);
+    }
+
 }

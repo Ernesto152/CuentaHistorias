@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>PS Service</title>
+    <tittle>PS Service</tittle>
   </head>
   <body>
-    <a href="listWords.jsp">List Words</a>
+    <a href="listStories.jsp">List Words</a>
   </body>
 </html>

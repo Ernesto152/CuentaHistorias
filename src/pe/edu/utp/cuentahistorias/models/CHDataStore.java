@@ -10,6 +10,10 @@ public class CHDataStore {
     private Connection connection;
     private WordsEntity wordsEntity;
     private UsersEntity usersEntity;
+    private StoriesEntity storiesEntity;
+    private CommentsEntity commentsEntity;
+    private SubscriptionsEntity subscriptionsEntity;
+    private EnterprisesEntity enterprisesEntity;
 
     public CHDataStore(Connection connection) {
         this.connection = connection;
@@ -52,4 +56,14 @@ public class CHDataStore {
     public boolean createWord(Word word){
         return getWordsEntity().add(word);
     }
+    private StoriesEntity getStoriesEntity(){
+        if (storiesEntity == null){
+            storiesEntity = new StoriesEntity(getConnection());
+        }
+        return storiesEntity;
+    }
+    public boolean createStory(Story story){
+        return getStoriesEntity().add(story);
+    }
+
 }

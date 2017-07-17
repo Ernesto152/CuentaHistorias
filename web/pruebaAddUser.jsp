@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add User</title>
+    <tittle>Add User</tittle>
 </head>
 <body>
 <s:form action="user">

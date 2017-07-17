@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Welcome</title>
+    <tittle>Welcome</tittle>
 </head>
 <body>
     <p>El usuario <s:property value="firstName"/> ha sido registrado</p>
