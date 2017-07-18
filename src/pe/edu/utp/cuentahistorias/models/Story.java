@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class Story {
     private int id;
-    private String tittle;
+    private String title;
     private String description;
     private Date publicationDate;
     private String imageUrl;
@@ -20,9 +20,9 @@ public class Story {
     public Story() {
     }
 
-    public Story(int id, String tittle, String description, Date publicationDate, String imageUrl, int like, int dislike, User user) {
+    public Story(int id, String title, String description, Date publicationDate, String imageUrl, int like, int dislike, User user) {
         this.id = id;
-        this.tittle = tittle;
+        this.title = title;
         this.description = description;
         this.publicationDate = publicationDate;
         this.imageUrl = imageUrl;
@@ -40,17 +40,25 @@ public class Story {
         return this;
     }
 
-    public String getTittle() {
-        return tittle;
+    public String getTitle() {
+        return title;
     }
 
-    public Story setTittle(String tittle) {
-        this.tittle = tittle;
+    public String getTitleAsValue(){
+        return "'" + getTitle() + "'";
+    }
+
+    public Story setTitle(String title) {
+        this.title = title;
         return this;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public String getDescriptionAsValue(){
+        return "'" + getDescription() + "'";
     }
 
     public Story setDescription(String description) {
@@ -60,6 +68,10 @@ public class Story {
 
     public Date getPublicationDate() {
         return publicationDate;
+    }
+
+    public String getPublicationDateAsValue(){
+        return "'" + getPublicationDate() + "'";
     }
 
     public Story setPublicationDate(Date publicationDate) {
@@ -102,17 +114,18 @@ public class Story {
         this.user = user;
         return this;
     }
+
     public static Story build(ResultSet resultSet, UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
         try {
             return (new Story())
                     .setId(resultSet.getInt("id"))
-                    .setTittle(resultSet.getString("title"))
+                    .setTitle(resultSet.getString("title"))
                     .setDescription(resultSet.getString("description"))
                     .setPublicationDate(resultSet.getDate("publication_date"))
                     .setImageUrl(resultSet.getString("image_url"))
                     .setLike(resultSet.getInt("like"))
                     .setDislike(resultSet.getInt("dislike"))
-                    .setUser(usersEntity.findById(resultSet.getInt(""),subscriptionsEntity, enterprisesEntity));
+                    .setUser(usersEntity.findById(resultSet.getInt("user_id"), subscriptionsEntity, enterprisesEntity));
         } catch (SQLException e) {
             e.printStackTrace();
         }

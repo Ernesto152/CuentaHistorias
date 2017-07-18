@@ -1,6 +1,7 @@
 package pe.edu.utp.cuentahistorias.models;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -43,6 +44,11 @@ public class UsersEntity extends BaseEntity {
         return findByCriteria(criteria, subscriptionsEntity, enterprisesEntity).get(0);
     }
 
+    public User validate(String email, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
+        String sql = "SELECT password FROM users WHERE email = '" + email + "'";
+        return null;
+    }
+
     public List<User> findByCriteria(String criteria, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
         String sql = getDefaultQuery() + (criteria.isEmpty() ? "" : " WHERE " + criteria);
         List<User> users = new ArrayList<>();
@@ -77,7 +83,8 @@ public class UsersEntity extends BaseEntity {
      */
 
     public boolean add(User user){
-        String sql = "INSERT INTO users(first_name, last_name, email, password, subscription_start, subscription_renovation, subscription_id, enterprise_id)" +
+        String sql = "INSERT INTO users(first_name, last_name, email, password, subscription_start, " +
+                "subscription_renovation, subscription_id, enterprise_id)" +
                 " VALUES(" +
                     user.getFirstNameAsValue() + ", " +
                     user.getLastNameAsValue() + ", " +
@@ -89,6 +96,7 @@ public class UsersEntity extends BaseEntity {
                     "NULL)";
         return change(sql);
     }
+
 
     /*
     INSERT INTO
