@@ -36,10 +36,10 @@
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
                     <div>
                         <h4>
-                            <span class="label label-primary">Palabra 1</span>
-                            <span class="label label-primary">Palabra 2</span>
-                            <span class="label label-primary">Palabra 3</span>
-                            <span class="label label-primary">Palabra 4</span>
+                            <span class="label label-primary">arreglando </span>
+                            <span class="label label-primary">la vaina</span>
+                            <span class="label label-primary">Para q le des</span>
+                            <span class="label label-primary">Pcmoit</span>
                             <span class="label label-primary">Palabra 5</span>
                         </h4>
                     </div>
