@@ -33,16 +33,22 @@ public class StoriesEntity extends BaseEntity{
         return null;
     }
 
-    /*
-    public boolean add(Story story){
-        String sql = "INSERT INTO stories(title, description, publication_date, image_url, `like`, `dislike`, user_id)" +
-                " VALUES( '" +story.getTittle() + "' , '" + story.getDescription() + "', " + " CURDATE()" + ", " + story.getImageUrl() + ", " +
-                story.getLike() + ", " + story.getDislike() + ", 1 )";
-        return change(sql);
-    }
-    */
 
     public boolean add(Story story){
+        String sql = "INSERT INTO stories(title, description, publication_date, image_url, `like`, `dislike`, user_id)" +
+                " VALUES( '" +
+                story.getTitle() + "' , '" +
+                story.getDescription() + "', " +
+                " CURDATE()" + ", " +
+                story.getImageUrl() + ", " +
+                story.getLike() + ", " +
+                story.getDislike() +
+                ", 1 )";
+        return change(sql);
+    }
+
+
+    /*public boolean add(Story story){
         String sql = "INSERT INTO stories(title, description, publication_date, user_id" +
                 " VALUES(" +
                 story.getTitleAsValue() + ", " +
@@ -50,7 +56,7 @@ public class StoriesEntity extends BaseEntity{
                 "CURDATE(), " +
                 "1)";
         return change(sql);
-    }
+    }*/
     /*
     INSERT INTO
             stories(title, description, publication_date, user_id)
