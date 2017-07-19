@@ -69,4 +69,9 @@ public class CHService {
     public boolean createStory(Story story){
         return getDataStore().createStory(story);
     }
+
+    /*---------------------------------------------------------------*/
+    public List<Word> getRandomWords(){
+        return getDataStore().randomWords();
+    }
 }

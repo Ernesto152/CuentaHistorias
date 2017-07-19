@@ -12,5 +12,6 @@
   </head>
   <body>
     <a href="listStories.jsp">List Words</a>
+    <a href="listRandomWords.jsp">List Random Words</a>
   </body>
 </html>

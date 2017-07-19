@@ -93,4 +93,9 @@ public class CHDataStore {
     public boolean createStory(Story story){
         return getStoriesEntity().add(story);
     }
+
+    /*-------------------------------------------------------------------------------------*/
+    public List<Word> randomWords(){
+        return getWordsEntity().randomWords();
+    }
 }

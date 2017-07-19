@@ -53,4 +53,8 @@ public class WordsEntity extends BaseEntity{
                             word.getNameAsValue() + ")";
         return change(sql);
     }
+
+    public List<Word> randomWords(){
+        return findByCriteria("true ORDER BY RAND() LIMIT 5");
+    }
 }

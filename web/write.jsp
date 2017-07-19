@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="bootstrap.jsp"/>
@@ -36,12 +37,19 @@
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
                     <div>
                         <h4>
+                            <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>
+                            <c:forEach var="word" items="${service.randomWords}">
+                            <span class="label label-primary"><c:out value="${word.name}"/></span>
+                            </c:forEach>
+                        </h4>
+                        <!--
+                        <h4>
                             <span class="label label-primary">arreglando </span>
                             <span class="label label-primary">la vaina</span>
                             <span class="label label-primary">Para q le des</span>
                             <span class="label label-primary">Pcmoit</span>
                             <span class="label label-primary">Palabra 5</span>
-                        </h4>
+                        </h4>-->
                     </div>
                     <div class="panel panel-primary">
                         <div class="panel-heading">
