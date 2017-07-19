@@ -16,7 +16,7 @@
 <c:forEach var="story" items="${service.stories}">
     <p><c:out value="${story.title}"/></p>
     <p><c:out value="${story.description}"/></p>
-    <p><c:out value="${story.user.id}"/></p>
+    <p><c:out value="${story.user.firstName}"/></p>
     <p><c:out value="${story.publicationDate}"/></p>
 </c:forEach>
 </body>

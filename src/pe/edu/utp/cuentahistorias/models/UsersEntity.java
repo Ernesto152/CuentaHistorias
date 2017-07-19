@@ -25,7 +25,7 @@ public class UsersEntity extends BaseEntity {
     }
 
     public User findById(int id, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
-        String criteria = " id = " + id;
+        String criteria = " id = " + String.valueOf(id);
         return findByCriteria(criteria, subscriptionsEntity, enterprisesEntity).get(0);
     }
 

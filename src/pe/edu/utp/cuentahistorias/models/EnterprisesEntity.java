@@ -23,7 +23,7 @@ public class EnterprisesEntity extends BaseEntity {
     }
 
     public Enterprise findById(int id, SubscriptionsEntity subscriptionsEntity){
-        String criteria = " id = " + id;
+        String criteria = " id = " + String.valueOf(id);
         return findByCriteria(criteria, subscriptionsEntity).get(0);
     }
 
@@ -40,6 +40,6 @@ public class EnterprisesEntity extends BaseEntity {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return enterprises;
     }
 }

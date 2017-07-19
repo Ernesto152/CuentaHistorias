@@ -21,6 +21,11 @@ public class StoriesEntity extends BaseEntity{
         return findByCriteria("", usersEntity, subscriptionsEntity, enterprisesEntity);
     }
 
+    public Story findById(int id, UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
+        String criteria = " id = " + String.valueOf(id);
+        return findByCriteria(criteria, usersEntity, subscriptionsEntity, enterprisesEntity).get(0);
+    }
+
     public List<Story> findByCriteria(String criteria, UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
         String sql = getDefaultQuery() + (criteria.isEmpty() ? "" : " WHERE " + criteria);
         List<Story> stories = new ArrayList<>();
@@ -39,7 +44,7 @@ public class StoriesEntity extends BaseEntity{
 
 
     public boolean add(Story story){
-        String sql = "INSERT INTO stories(title, description, publication_date, image_url, `like`, `dislike`, user_id)" +
+        String sql = "INSERT INTO stories(title, description, publication_date, image_url, like, dislike, user_id)" +
                 " VALUES( '" +
                 story.getTitle() + "' , '" +
                 story.getDescription() + "', " +

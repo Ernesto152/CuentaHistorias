@@ -73,4 +73,8 @@ public class CHService {
     public List<Story> getStories(){
         return getDataStore().findAllStories();
     }
+
+    public List<User> getUsers(){
+        return getDataStore().findAllUsers();
+    }
 }

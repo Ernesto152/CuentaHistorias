@@ -96,7 +96,7 @@ public class Enterprise {
                     .setName(resultSet.getString("name"))
                     .setRuc(resultSet.getInt("ruc"))
                     .setCategory(resultSet.getString("category"))
-                    .setSubscription(subscriptionsEntity.findById(resultSet.getInt("subscriptions")));
+                    .setSubscription(subscriptionsEntity.findById(resultSet.getInt("subscription_id")));
         } catch (SQLException e) {
             e.printStackTrace();
         }

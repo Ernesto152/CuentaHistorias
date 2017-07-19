@@ -48,7 +48,7 @@
                             <p><c:out value="${story.description}"/></p>
                             <p>
                                 <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
-                                <strong>Author, Author</strong>
+                                <strong><c:out value="${story.user.firstName}"/> <c:out value="${story.user.lastName}"/> </strong>
                             </p>
                         </div>
                     </div>

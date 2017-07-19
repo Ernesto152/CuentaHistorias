@@ -37,6 +37,10 @@ public class CHDataStore {
         return usersEntity;
     }
 
+    public User findUsersById(int id){
+        return getUsersEntity().findById(id, getSubscriptionsEntity(), getEnterprisesEntity());
+    }
+
     public boolean createUser(User user){
         return getUsersEntity().add(user);
     }
@@ -51,6 +55,14 @@ public class CHDataStore {
     public List<Word> findAllWords(){
         return getWordsEntity().findAll();
     }
+
+
+
+    /*
+    public List<Income> findAllIncomes(){
+        return getIncomesEntity().findAll(getUsersEntity(),getSubscriptionsEntity(),getCurrenciesEntity());
+    }
+     */
 
     public boolean createWord(Word word){
         return getWordsEntity().add(word);
@@ -76,11 +88,11 @@ public class CHDataStore {
         return enterprisesEntity;
     }
 
-    public Subscription findSubscription(int id){
+    public Subscription findSubscriptionsById(int id){
         return getSubscriptionsEntity().findById(id);
     }
 
-    public Enterprise findEnterprise(int id){
+    public Enterprise findEnterprisesById(int id){
         return getEnterprisesEntity().findById(id, getSubscriptionsEntity());
     }
 
@@ -101,5 +113,9 @@ public class CHDataStore {
 
     public List<Story> findAllStories(){
         return getStoriesEntity().findAll(getUsersEntity(), getSubscriptionsEntity(), getEnterprisesEntity());
+    }
+
+    public List<User> findAllUsers(){
+        return getUsersEntity().findAll(getSubscriptionsEntity(), getEnterprisesEntity());
     }
 }
