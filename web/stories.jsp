@@ -8,12 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 
 <html>
 <head>
-    <tittle>CuentaHistorias</tittle>
     <style>
         .im{
             display: flex;
@@ -33,16 +33,19 @@
 
 <b:container>
     <div class="row">
+        <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>
+        <c:forEach var="story" items="${service.stories}">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="thumbnail">
                 <div class="row">
-                    <a href="detail.jsp"><div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
+                    <a href="detail.jsp">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
                         <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
                     </div></a>
                     <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                         <div class="caption">
-                            <h3><s:property value="title" /></h3>
-                            <p><s:property value="description" /> </p>
+                            <h3><c:out value="${story.title}"/></h3>
+                            <p><c:out value="${story.description}"/></p>
                             <p>
                                 <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
                                 <strong>Author, Author</strong>
@@ -52,73 +55,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="thumbnail">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
-                        <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                        <div class="caption">
-                            <h3><s:property value="title" /></h3>
-                            <p><s:property value="description" /> </p>
-                            <p>
-                                <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
-                                <strong>Author, Author</strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </c:forEach>
     </div>
-
-    <!--------------------------------------------------------------------------------------------------------------->
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="thumbnail">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
-                        <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                        <div class="caption">
-                            <h3>Título</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua...</p>
-                            <p>
-                                <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
-                                <strong>Author, Author</strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="thumbnail">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
-                        <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                        <div class="caption">
-                            <h3>Título</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua...</p>
-                            <p>
-                                <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
-                                <strong>Author, Author</strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 <jsp:include page="footer.jsp"/>
 </b:container>
 </body>

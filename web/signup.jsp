@@ -13,8 +13,6 @@
 
 <html>
 <head>
-    <title>CuentaHistorias</title>
-
 </head>
 <body>
 <b:container>

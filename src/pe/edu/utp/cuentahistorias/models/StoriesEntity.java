@@ -17,6 +17,10 @@ public class StoriesEntity extends BaseEntity{
     public StoriesEntity() {
     }
 
+    public List<Story> findAll(UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
+        return findByCriteria("", usersEntity, subscriptionsEntity, enterprisesEntity);
+    }
+
     public List<Story> findByCriteria(String criteria, UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
         String sql = getDefaultQuery() + (criteria.isEmpty() ? "" : " WHERE " + criteria);
         List<Story> stories = new ArrayList<>();

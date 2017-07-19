@@ -17,7 +17,7 @@ public class WordsEntity extends BaseEntity{
     public WordsEntity() {
     }
 
-    List<Word> findAll(){
+    public List<Word> findAll(){
         return findByCriteria("");
     }
 

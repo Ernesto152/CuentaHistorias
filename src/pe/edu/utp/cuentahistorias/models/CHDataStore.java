@@ -98,4 +98,8 @@ public class CHDataStore {
     public List<Word> randomWords(){
         return getWordsEntity().randomWords();
     }
+
+    public List<Story> findAllStories(){
+        return getStoriesEntity().findAll(getUsersEntity(), getSubscriptionsEntity(), getEnterprisesEntity());
+    }
 }

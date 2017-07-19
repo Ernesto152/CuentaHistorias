@@ -61,11 +61,6 @@ public class CHService {
         return getDataStore().createWord(word);
     }
 
-    /*
-    public boolean createWord(Word word){
-        return getWordsEntity().add(word);
-    }
-     */
     public boolean createStory(Story story){
         return getDataStore().createStory(story);
     }
@@ -73,5 +68,9 @@ public class CHService {
     /*---------------------------------------------------------------*/
     public List<Word> getRandomWords(){
         return getDataStore().randomWords();
+    }
+
+    public List<Story> getStories(){
+        return getDataStore().findAllStories();
     }
 }

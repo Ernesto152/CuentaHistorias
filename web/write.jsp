@@ -13,7 +13,6 @@
 <jsp:include page="navbar.jsp"/>
 <html>
 <head>
-    <tittle>CuentaHistorias</tittle>
 </head>
 <body>
 <b:container>
