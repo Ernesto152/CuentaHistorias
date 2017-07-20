@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                     <p>
-                        <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="80" height="80">
+                        <img class="img-circle" src="img/profile.png" alt="Generic placeholder image" width="80" height="80">
                     </p>
                     <p>
                         <strong>Author, Author</strong>

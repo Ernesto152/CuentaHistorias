@@ -20,7 +20,7 @@
             <result name="success">index.jsp</result>
             <result name="error">signup.jsp</result>
         </action>
-        <action name="story" class="pe.edu.utp.cuentahistorias.actions.StoryAction">
+        <action name="story" class="pe.edu.utp.cuentahistorias.actions.StoryAction" method="execute">
             <result name="success">stories.jsp</result>
             <result name="error">signup.jsp</result>
         </action>

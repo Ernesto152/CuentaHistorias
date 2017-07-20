@@ -44,36 +44,11 @@ public class StoriesEntity extends BaseEntity{
 
 
     public boolean add(Story story){
-        String sql = "INSERT INTO stories(title, description, publication_date, image_url, like, dislike, user_id)" +
-                " VALUES( '" +
-                story.getTitle() + "' , '" +
-                story.getDescription() + "', " +
-                " CURDATE()" + ", " +
-                story.getImageUrl() + ", " +
-                story.getLike() + ", " +
-                story.getDislike() +
-                ", 1 )";
-        return change(sql);
-    }
-
-
-    /*public boolean add(Story story){
-        String sql = "INSERT INTO stories(title, description, publication_date, user_id" +
+        String sql = "INSERT INTO stories(title, description, publication_date, user_id)" +
                 " VALUES(" +
                 story.getTitleAsValue() + ", " +
                 story.getDescriptionAsValue() + ", " +
-                "CURDATE(), " +
-                "1)";
+                " CURDATE(), 4)";
         return change(sql);
-    }*/
-    /*
-    INSERT INTO
-            stories(title, description, publication_date, user_id)
-            VALUES('Primera historia',
-            'El arte de la microhistoria Luis González y González El Colegio de Michoacán DESLINDE
-            Aunque acepté con gusto la invitación de presentar una ponencia sobre teoría y método de la
-            microhistoria, me acerco a ustedes con temor.',
-            CURDATE(),
-            2)
-     */
+    }
 }

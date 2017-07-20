@@ -30,6 +30,7 @@ public class CHDataStore {
         return this;
     }
 
+    /*------------USERS -------------------------------------------------*/
     private UsersEntity getUsersEntity(){
         if (usersEntity == null){
             usersEntity = new UsersEntity(getConnection());
@@ -41,10 +42,19 @@ public class CHDataStore {
         return getUsersEntity().findById(id, getSubscriptionsEntity(), getEnterprisesEntity());
     }
 
+    public User findByName(String firstName, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
+        return getUsersEntity().findByFirstName(firstName, subscriptionsEntity, enterprisesEntity);
+    }
+
+    public List<User> findAllUsers(){
+        return getUsersEntity().findAll(getSubscriptionsEntity(), getEnterprisesEntity());
+    }
+
     public boolean createUser(User user){
         return getUsersEntity().add(user);
     }
 
+    /*------------WORDS -------------------------------------------------*/
     private WordsEntity getWordsEntity(){
         if (wordsEntity == null){
             wordsEntity = new WordsEntity(getConnection());
@@ -56,24 +66,15 @@ public class CHDataStore {
         return getWordsEntity().findAll();
     }
 
-
-
-    /*
-    public List<Income> findAllIncomes(){
-        return getIncomesEntity().findAll(getUsersEntity(),getSubscriptionsEntity(),getCurrenciesEntity());
-    }
-     */
-
     public boolean createWord(Word word){
         return getWordsEntity().add(word);
     }
 
-    /*------------------------------------------------*/
-
-    public User findByName(String firstName, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
-        return getUsersEntity().findByFirstName(firstName, subscriptionsEntity, enterprisesEntity);
+    public List<Word> randomWords(){
+        return getWordsEntity().randomWords();
     }
 
+    /*------------SUBSCRIPTIONS -------------------------------------------------*/
     private SubscriptionsEntity getSubscriptionsEntity(){
         if (subscriptionsEntity == null){
             subscriptionsEntity = new SubscriptionsEntity(getConnection());
@@ -81,6 +82,11 @@ public class CHDataStore {
         return subscriptionsEntity;
     }
 
+    public Subscription findSubscriptionsById(int id){
+        return getSubscriptionsEntity().findById(id);
+    }
+
+    /*------------ENTERPRISES -------------------------------------------------*/
     private EnterprisesEntity getEnterprisesEntity(){
         if (enterprisesEntity == null){
             enterprisesEntity = new EnterprisesEntity(getConnection());
@@ -88,14 +94,11 @@ public class CHDataStore {
         return enterprisesEntity;
     }
 
-    public Subscription findSubscriptionsById(int id){
-        return getSubscriptionsEntity().findById(id);
-    }
-
     public Enterprise findEnterprisesById(int id){
         return getEnterprisesEntity().findById(id, getSubscriptionsEntity());
     }
 
+    /*------------STORIES -------------------------------------------------*/
     private StoriesEntity getStoriesEntity(){
         if (storiesEntity == null){
             storiesEntity = new StoriesEntity(getConnection());
@@ -106,16 +109,7 @@ public class CHDataStore {
         return getStoriesEntity().add(story);
     }
 
-    /*-------------------------------------------------------------------------------------*/
-    public List<Word> randomWords(){
-        return getWordsEntity().randomWords();
-    }
-
     public List<Story> findAllStories(){
         return getStoriesEntity().findAll(getUsersEntity(), getSubscriptionsEntity(), getEnterprisesEntity());
-    }
-
-    public List<User> findAllUsers(){
-        return getUsersEntity().findAll(getSubscriptionsEntity(), getEnterprisesEntity());
     }
 }

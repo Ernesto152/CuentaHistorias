@@ -93,7 +93,7 @@ public class StoryAction {
     }
 
     public String execute(){
-        story = new Story(id, title, description, publicationDate, imageUrl,like, dislike, user);
+        story = new Story(getId(), title, description, publicationDate, imageUrl, like, dislike, getUser());
         try {
             CHService service = new CHService();
             service.createStory(story);

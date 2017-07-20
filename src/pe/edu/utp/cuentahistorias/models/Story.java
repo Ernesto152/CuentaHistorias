@@ -83,6 +83,10 @@ public class Story {
         return imageUrl;
     }
 
+    public String getImageUrlAsValue(){
+        return "'" + getImageUrl() + "'";
+    }
+
     public Story setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -90,6 +94,10 @@ public class Story {
 
     public int getLike() {
         return like;
+    }
+
+    public String getLikeAsString(){
+        return String.valueOf(getLike());
     }
 
     public Story setLike(int like) {
@@ -101,6 +109,10 @@ public class Story {
         return dislike;
     }
 
+    public String getDislikeAsString(){
+        return String.valueOf(getDislike());
+    }
+
     public Story setDislike(int dislike) {
         this.dislike = dislike;
         return this;
@@ -108,6 +120,10 @@ public class Story {
 
     public User getUser() {
         return user;
+    }
+
+    public String getUserAsString(){
+        return String.valueOf(getUser());
     }
 
     public Story setUser(User user) {

@@ -48,11 +48,15 @@ public class CHService {
         return dataStore;
     }
 
-    /*--------------------------------------------------------------*/
+    /*-----------USERS----------------------------------------------*/
     public boolean createUser(User user){
         return getDataStore().createUser(user);
     }
 
+    public List<User> getUsers(){
+        return getDataStore().findAllUsers();
+    }
+    /*-----------WORDS----------------------------------------------*/
     public List<Word> getWords(){
         return getDataStore().findAllWords();
     }
@@ -61,20 +65,16 @@ public class CHService {
         return getDataStore().createWord(word);
     }
 
-    public boolean createStory(Story story){
-        return getDataStore().createStory(story);
-    }
-
-    /*---------------------------------------------------------------*/
     public List<Word> getRandomWords(){
         return getDataStore().randomWords();
     }
 
-    public List<Story> getStories(){
-        return getDataStore().findAllStories();
+    /*-----------STORIES----------------------------------------------*/
+    public boolean createStory(Story story){
+        return getDataStore().createStory(story);
     }
 
-    public List<User> getUsers(){
-        return getDataStore().findAllUsers();
+    public List<Story> getStories(){
+        return getDataStore().findAllStories();
     }
 }

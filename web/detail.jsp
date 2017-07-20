@@ -18,7 +18,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
                 <div class="col-lg-1">
-                <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
+                <img class="img-circle" src="img/profile.png" alt="Generic placeholder image" width="40" height="40">
             </div>
                 <div class="col-lg-11">
                     <div class="row">
@@ -47,7 +47,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-1 center-block center-pill">
-                    <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
+                    <img class="img-circle" src="img/profile.png" alt="Generic placeholder image" width="40" height="40">
                     <p>Author</p>
                 </div>
                 <div class="col-lg-11">
@@ -61,7 +61,7 @@
 
             <div class="row">
                 <div class="col-lg-1">
-                    <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
+                    <img class="img-circle" src="img/profile.png" alt="Generic placeholder image" width="40" height="40">
                     <p>Author</p>
                 </div>
                 <div class="col-lg-11">
@@ -75,7 +75,7 @@
 
             <div class="row">
                 <div class="col-lg-1">
-                    <img class="img-circle" src="img/profile.jpg" alt="Generic placeholder image" width="40" height="40">
+                    <img class="img-circle" src="img/profile.png" alt="Generic placeholder image" width="40" height="40">
                     <p>Author</p>
                 </div>
                 <div class="col-lg-11">
