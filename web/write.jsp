@@ -41,14 +41,6 @@
                             <span class="label label-primary"><c:out value="${word.name}"/></span>
                             </c:forEach>
                         </h4>
-                        <!--
-                        <h4>
-                            <span class="label label-primary">arreglando </span>
-                            <span class="label label-primary">la vaina</span>
-                            <span class="label label-primary">Para q le des</span>
-                            <span class="label label-primary">Pcmoit</span>
-                            <span class="label label-primary">Palabra 5</span>
-                        </h4>-->
                     </div>
                     <div class="panel panel-primary">
                         <div class="panel-heading">
@@ -62,29 +54,13 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <div class="form-group">
-
-                                <%--Título: <input type="text" class="form-control" placeholder="¿Cómo desea titular su historia?">--%>
-                                <br>
-                                <div class="container" id="container">
-                                    <s:form action="story" id="story">
-                                        <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" />
-                                        <s:textarea name="description" class="form-control" rows="5" />
-
-                                        <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary"/>
-                                    </s:form>
-                                </div>
-                                <%--<textarea class="form-control" rows="5" placeholder="Empieza aquí...">
-<%--<textarea class="form-control" rows="5" placeholder="Empieza aquí...">
-<%--<textarea class="form-control" rows="5" placeholder="Empieza aquí...">
-<%--<textarea class="form-control" rows="5" placeholder="Empieza aquí...">
-                                </textarea>--%>
-
-                            </div>
+                            <s:form action="story" id="story">
+                                Título: <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%"/>
+                                <s:textarea name="description" class="form-control" rows="5" size="100%" />
+                                </hr>
+                                <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary"/>
+                            </s:form>
                         </div>
-                    </div>
-                    <div class="pull-right">
-                        <button type="submit" class="btn btn-primary">Publicar</button>
                     </div>
                 </div>
             </div>

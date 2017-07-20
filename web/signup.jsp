@@ -25,10 +25,10 @@
                 <s:form action="user" id="contact">
                     <h3>Regístrate</h3>
                     <h4>Únete a nosotros y experimenta</h4>
-                    <s:textfield placeholder="Nombre" name="firstName"/>
-                    <s:textfield placeholder="Apellidos" name="lastName"/>
-                    <s:textfield placeholder="Correo electrónico" name="email" type="email"/>
-                    <s:password placeholder="Contraseña" name="password" type="password"/>
+                    <s:textfield placeholder="Nombre" name="firstName" size="100%"/>
+                    <s:textfield placeholder="Apellidos" name="lastName" size="100%"/>
+                    <s:textfield placeholder="Correo electrónico" name="email" type="email" size="100%"/>
+                    <s:password placeholder="Contraseña" name="password" type="password" size="100%"/>
                     <s:submit cssClass="btn btn-primary" value="Registrarme"/>
                 </s:form>
             </div>
