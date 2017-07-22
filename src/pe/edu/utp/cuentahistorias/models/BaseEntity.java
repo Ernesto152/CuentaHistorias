@@ -8,7 +8,7 @@ import java.sql.SQLException;
  */
 public class BaseEntity {
     private Connection connection;
-    private static String BASE_QUERY = "SELECT * FROM ";
+    private static String BASE_QUERY = " SELECT * FROM ";
     private String tableName;
 
     public BaseEntity(Connection connection, String tableName) {

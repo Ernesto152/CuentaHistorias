@@ -26,7 +26,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="img/creah4.jpg" class="first-slide" src="" alt="First slide">
+            <img src="img/imgProject/creah4.jpg" class="first-slide" src="" alt="First slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Crea</h1>
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="img/leeh.png" class="second-slide" src="" alt="Second slide">
+            <img src="img/imgProject/leeh.png" class="second-slide" src="" alt="Second slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Lee</h1>
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="img/compiteh.jpg" class="third-slide" src="" alt="Third slide">
+            <img src="img/imgProject/compiteh.jpg" class="third-slide" src="" alt="Third slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Compite</h1>
@@ -77,19 +77,19 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
-                <img class="img-circle" src="img/icoescr.png" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="img/imgProject/icoescr.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Crea</h2>
                 <p>En esta sección podrás plasmar tu imaginación en la web, te brindaremos palabras la cual deberás utilizar en tus oraciones, y asi darles un sentido a tu historia </p>
                 <p><a class="btn btn-default" href="write.jsp" role="button">Ir &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-                <img class="img-circle" src="img/icolee.png" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="img/imgProject/icolee.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Lee</h2>
                 <p> Como todo buen lector que eres, hemos puesto a tu disposión este apartado para que puedas cautivarte con las creaciones de tus colegas.</p>
                 <p><a class="btn btn-default" href="stories.jsp" role="button">Ir &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-                <img class="img-circle" src="img/icocomp.png" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="img/imgProject/icocomp.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Compite</h2>
                 <p>Ahora podras retar a todos los creadores demostrando que tus habilidades pueden super a cualquiera, no te limites y deja volar tu imaginación.</p>
                 <p><a class="btn btn-default" href="#" role="button">Ir &raquo;</a></p>
@@ -107,7 +107,7 @@
                 <p class="lead">.</p>
             </div>
             <div class="col-md-5">
-                <img src="img/creah2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
+                <img src="img/imgProject/creah2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
             </div>
         </div>
 
@@ -119,7 +119,7 @@
                 <p class="lead">.</p>
             </div>
             <div class="col-md-5 col-md-pull-7">
-                <img src="img/leer2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
+                <img src="img/imgProject/leer2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
             </div>
         </div>
 
@@ -131,7 +131,7 @@
                 <p class="lead"> .</p>
             </div>
             <div class="col-md-5">
-                <img src="img/compiteh2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
+                <img src="img/imgProject/compiteh2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
             </div>
         </div>
     </div>

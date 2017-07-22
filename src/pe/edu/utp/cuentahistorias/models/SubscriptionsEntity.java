@@ -47,4 +47,5 @@ public class SubscriptionsEntity extends BaseEntity {
         }
         return null;
     }
+
 }

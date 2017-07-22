@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                     <p>
-                        <img class="img-circle" src="img/profile.png" alt="Generic placeholder image" width="80" height="80">
+                        <img class="img-circle" src="img/imgProject/profile.png" alt="Generic placeholder image" width="80" height="80">
                     </p>
                     <p>
                         <strong>Author, Author</strong>
@@ -58,7 +58,15 @@
                                 Título: <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%"/>
                                 <s:textarea name="description" class="form-control" rows="5" size="100%" />
                                 </hr>
-                                <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary"/>
+                                <center>
+                                <input id="file_url" type="file" class="form-control " id="exampleInputFile" aria-describedby="fileHelp" value="Agrega una Imagen" >
+                                <img id="img_destino" src=""  />
+                                <s:div id="vista_previa" class="form-control "></s:div>
+
+                                </center>
+                                <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary" name="imagen"/>
+
+
                             </s:form>
                         </div>
                     </div>
@@ -71,4 +79,24 @@
 </b:container>
 <!--<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">-->
 </body>
+
+
+
+
+
+<script>
+    function mostrarImagen(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#img_destino').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#file_url").change(function(){
+        mostrarImagen(this);
+    });
+</script>
 </html>

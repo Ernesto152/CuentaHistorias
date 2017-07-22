@@ -11,17 +11,20 @@ public class Subscription {
     private String name;
     private float price;
     private int duration;
+    private String photo;
 
 
     public Subscription() {
     }
 
-    public Subscription(int id, String name, float price, int duration) {
+    public Subscription(int id, String name, float price, int duration,String photo) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.duration = duration;
+        this.photo = photo;
     }
+
 
     public int getId() {
         return id;
@@ -74,6 +77,14 @@ public class Subscription {
         this.duration = duration;
         return this;
     }
+    public String getPhoto() {
+        return photo;
+    }
+
+    public Subscription setPhoto(String photo) {
+        this.photo = photo;
+        return this;
+    }
 
     public static Subscription build(ResultSet resultSet){
         try {
@@ -81,10 +92,13 @@ public class Subscription {
                     .setId(resultSet.getInt("id"))
                     .setName(resultSet.getString("name"))
                     .setPrice(resultSet.getFloat("price"))
-                    .setDuration(resultSet.getInt("duration"));
+                    .setDuration(resultSet.getInt("duration"))
+                    .setPhoto(resultSet.getString("photo"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
+
+
 }

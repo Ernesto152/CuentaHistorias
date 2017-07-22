@@ -41,14 +41,16 @@
                     <a href="detail.jsp">
                     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
                         <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
+
                     </div></a>
                     <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                         <div class="caption">
                             <h3><c:out value="${story.title}"/></h3>
                             <p><c:out value="${story.description}"/></p>
                             <p>
-                                <img class="img-circle" src="img/profile.png" alt="Generic placeholder image" width="40" height="40">
+                                <img class="img-circle" src='img/imgPhoto/${story.user.firstName}.png' alt="Generic placeholder image" width="40" height="40">
                                 <strong><c:out value="${story.user.firstName}"/> <c:out value="${story.user.lastName}"/> </strong>
+
                             </p>
                         </div>
                     </div>
