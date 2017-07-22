@@ -59,7 +59,7 @@
         </div>
         </c:forEach>
     </div>
-<jsp:include page="footer.jsp"/>
 </b:container>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

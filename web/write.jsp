@@ -13,6 +13,11 @@
 <jsp:include page="navbar.jsp"/>
 <html>
 <head>
+    <style>
+        body{
+            background-image: url("img/writer.jpg");
+        }
+    </style>
 </head>
 <body>
 <b:container>
@@ -57,26 +62,20 @@
                             <s:form action="story" id="story">
                                 Título: <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%"/>
                                 <s:textarea name="description" class="form-control" rows="5" size="100%" />
-                                </hr>
-                                <center>
-                                <input id="file_url" type="file" class="form-control " id="exampleInputFile" aria-describedby="fileHelp" value="Agrega una Imagen" >
-                                <img id="img_destino" src=""  />
-                                <s:div id="vista_previa" class="form-control "></s:div>
-
-                                </center>
                                 <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary" name="imagen"/>
-
-
                             </s:form>
                         </div>
                     </div>
+                    <input id="file_url" type="file" class="form-control " id="exampleInputFile" aria-describedby="fileHelp" value="Agrega una Imagen" >
+                    <img id="img_destino" src=""  />
+                    <s:div id="vista_previa" class="form-control "></s:div>
                 </div>
             </div>
         </div>
 
     </div>
-    <jsp:include page="footer.jsp"/>
 </b:container>
+<jsp:include page="footer.jsp"/>
 <!--<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">-->
 </body>
 

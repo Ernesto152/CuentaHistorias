@@ -17,9 +17,10 @@
 
 <!-- Custom styles for this template -->
 <link href="css/carousel.css" rel="stylesheet">
-<link href="css/signup.css" rel="stylesheet">
 <link href="css/navbar-fixed-top.css" rel="stylesheet">
+<link href="css/Footer-with-social-icons.css" rel="stylesheet">
 <link href="css/color.css" rel="stylesheet">
+<link href="css/signup.css" rel="stylesheet">
 
 <!--Chart-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
