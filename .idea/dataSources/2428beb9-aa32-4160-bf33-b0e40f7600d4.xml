@@ -183,7 +183,7 @@
     </column>
     <column id="53" parent="11" name="image_url">
       <Position>5</Position>
-      <DataType>blob|0</DataType>
+      <DataType>varchar(45)|0</DataType>
     </column>
     <column id="54" parent="11" name="like">
       <Position>6</Position>

@@ -74,6 +74,7 @@ public class CHDataStore {
         return getWordsEntity().randomWords();
     }
 
+//    public String validarPalabras(){return getStoriesEntity().buscarTexto();}
     /*------------SUBSCRIPTIONS -------------------------------------------------*/
     private SubscriptionsEntity getSubscriptionsEntity() {
         if (subscriptionsEntity == null) {

@@ -24,5 +24,7 @@
             <result name="success">stories.jsp</result>
             <result name="error">signup.jsp</result>
         </action>
+
     </package>
+
 </struts>

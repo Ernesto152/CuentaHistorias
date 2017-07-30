@@ -1,15 +1,21 @@
 package pe.edu.utp.cuentahistorias.models;
 
+import javax.swing.*;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Highlighter;
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by will on 17/06/2017.
  */
 public class StoriesEntity extends BaseEntity{
+
     public StoriesEntity(Connection connection) {
         super(connection, "stories");
     }
@@ -48,7 +54,12 @@ public class StoriesEntity extends BaseEntity{
                 " VALUES(" +
                 story.getTitleAsValue() + ", " +
                 story.getDescriptionAsValue() + ", " +
-                " CURDATE(), 4)";
+                " CURDATE()," +
+                " 2)";
         return change(sql);
     }
+
+
+
+
 }

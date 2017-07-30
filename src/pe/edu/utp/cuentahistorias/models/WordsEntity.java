@@ -55,6 +55,6 @@ public class WordsEntity extends BaseEntity{
     }
 
     public List<Word> randomWords(){
-        return findByCriteria("true ORDER BY RAND() LIMIT 5");
+        return findByCriteria("true ORDER BY RAND() LIMIT 1");
     }
 }
