@@ -54,6 +54,10 @@ public class CHDataStore {
         return getUsersEntity().add(user);
     }
 
+    public User findUsersByEmail(String email, String password){
+        return getUsersEntity().findByEmail(email, password, getSubscriptionsEntity(), getEnterprisesEntity());
+    }
+
     /*------------WORDS -------------------------------------------------*/
     private WordsEntity getWordsEntity() {
         if (wordsEntity == null) {

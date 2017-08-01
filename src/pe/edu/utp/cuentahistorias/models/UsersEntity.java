@@ -39,11 +39,6 @@ public class UsersEntity extends BaseEntity {
         return findByCriteria(criteria, subscriptionsEntity, enterprisesEntity).get(0);
     }
 
-    public User findByEmail(String email, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
-        String criteria = " email = '" + email + "'";
-        return findByCriteria(criteria, subscriptionsEntity, enterprisesEntity).get(0);
-    }
-
     public User validate(String email, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
         String sql = "SELECT password FROM users WHERE email = '" + email + "'";
         return null;
@@ -97,10 +92,8 @@ public class UsersEntity extends BaseEntity {
         return change(sql);
     }
 
-
-    /*
-    INSERT INTO
-    users(first_name, last_name, email, password, subscription_start, subscription_renovation, subscription_id, enterprise_id)
-    VALUES('Sheyla', 'Berrocal', 'sheylaberrocal@gmail.com', '12345', CURDATE(), DATE_ADD(CURDATE(), INTERVAL 180 DAY), 1, NULL)
-     */
+    public User findByEmail(String email, String password, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
+        String criteria = " email = '" + email + "' and password = '" + password + "'";
+        return findByCriteria(criteria, subscriptionsEntity, enterprisesEntity).get(0);
+    }
 }

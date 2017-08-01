@@ -76,27 +76,6 @@ public class UserAction {
         this.subscriptionRenovation = subscriptionRenovation;
     }
 
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public String execute(){
-        user = new User(getId(), firstName, lastName, email, password, subscriptionStart, subscriptionRenovation, getSubscription(), getEnterprise());
-        try {
-            CHService service = new CHService();
-            service.createUser(user);
-            return "success";
-        }catch (Exception e) {
-            e.printStackTrace();
-            return "error";
-        }
-    }
-
     public Subscription getSubscription() {
         return subscription;
     }
@@ -112,4 +91,29 @@ public class UserAction {
     public void setEnterprise(Enterprise enterprise) {
         this.enterprise = enterprise;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String login(){
+        try {
+            CHService service = new CHService();
+            user = service.getUsersByEmail(email, password);
+            id = user.getId();
+            return "success";
+        }catch (Exception e){
+            e.printStackTrace();
+            return "input";
+        }
+    }
+
+    public String execute(){
+            return "success";
+    }
+
 }

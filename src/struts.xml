@@ -20,11 +20,15 @@
             <result name="success">index.jsp</result>
             <result name="error">signup.jsp</result>
         </action>
-        <action name="story" class="pe.edu.utp.cuentahistorias.actions.StoryAction" method="execute">
+        <action name="*Story" class="pe.edu.utp.cuentahistorias.actions.StoryAction" method="{1}">
             <result name="success">stories.jsp</result>
-            <result name="error">signup.jsp</result>
+            <result name="input">write.jsp</result>
+        </action>
+
+        <action name="login" class="pe.edu.utp.cuentahistorias.actions.UserAction" method="login">
+            <result name="success">index.jsp</result>
+            <result name="input">error.jsp</result>
         </action>
 
     </package>
-
 </struts>

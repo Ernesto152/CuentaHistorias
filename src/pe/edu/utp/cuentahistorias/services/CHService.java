@@ -56,6 +56,15 @@ public class CHService {
     public List<User> getUsers(){
         return getDataStore().findAllUsers();
     }
+
+    public User getUsersByEmail(String email, String password){
+        return getDataStore().findUsersByEmail(email, password);
+    }
+
+    public User getUsersById(int id){
+        return getDataStore().findUsersById(id);
+    }
+
     /*-----------WORDS----------------------------------------------*/
     public List<Word> getWords(){
         return getDataStore().findAllWords();
@@ -76,5 +85,15 @@ public class CHService {
 
     public List<Story> getStories(){
         return getDataStore().findAllStories();
+    }
+
+    /*---------------------SUBSCRIPTIONS---------------------------------*/
+    public Subscription getSubscriptionsById(int id){
+        return getDataStore().findSubscriptionsById(id);
+    }
+
+    /*--------------------ENTERPRISES------------------------------------*/
+    public Enterprise getEnterprisesById(int id){
+        return getDataStore().findEnterprisesById(id);
     }
 }

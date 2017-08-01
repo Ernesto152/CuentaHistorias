@@ -1,5 +1,6 @@
 package pe.edu.utp.cuentahistorias.actions;
 
+import com.opensymphony.xwork2.ActionSupport;
 import pe.edu.utp.cuentahistorias.models.Story;
 import pe.edu.utp.cuentahistorias.models.User;
 import pe.edu.utp.cuentahistorias.services.CHService;
@@ -9,7 +10,7 @@ import java.util.Date;
 /**
  * Created by William on 15/07/2017.
  */
-public class StoryAction {
+public class StoryAction extends ActionSupport {
     private int id;
     private String title;
     private String description;
@@ -17,7 +18,7 @@ public class StoryAction {
     private String imageUrl;
     private int like;
     private int dislike;
-    private User user;
+    private int user;
     private Story story;
 
     public int getId() {
@@ -76,11 +77,11 @@ public class StoryAction {
         this.dislike = dislike;
     }
 
-    public User getUser() {
+    public int getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(int user) {
         this.user = user;
     }
 
@@ -93,14 +94,18 @@ public class StoryAction {
     }
 
     public String execute(){
-        story = new Story(getId(), title, description, publicationDate, imageUrl, like, dislike, getUser());
+        return SUCCESS;
+    }
+
+    public String add(){
         try {
             CHService service = new CHService();
+            story = new Story(id, title, description, publicationDate, imageUrl, like, dislike, service.getUsersById(user));
             service.createStory(story);
-            return "success";
+            return SUCCESS;
         }catch (Exception e) {
             e.printStackTrace();
-            return "error";
+            return INPUT;
         }
     }
 }

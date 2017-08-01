@@ -23,7 +23,7 @@
         }
     </style>
 </head>
-<body>
+<body id="story">
 <b:container>
     <b:jumbotron tittle="Sample">
         <h1>Cuentanos tu historia</h1>
@@ -92,16 +92,14 @@
                                 </button>
                             </div>
                         </div>
-
-<%--
-                            <s:form action="story" id="story"  >
-
-                                Título: <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%"/>
-                                <s:textarea name="description" class="form-control" rows="5" size="100%" />
-
-                                <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary" name="imagen"/>
-                            </s:form>
---%>                    <div class="panel-body">
+                   <div class="panel-body">
+                       <s:form action="addStory" id="story">
+                           <s:hidden name="user" value="%{#session.user_id}"/>
+                           Título: <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%"/>
+                           <s:textarea name="description" class="form-control" rows="5" size="100%" />
+                           <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary"/>
+                       </s:form>
+                       <!--
                             <form name="formulario"  id="chat" action="story" >
 
                                 <input type="text" name="title" class="form-control" placeholder="Ponle titulo a tu historia" size="100%" onfocus="restaurar()" />
@@ -112,6 +110,7 @@
                             <p id="aviso"></p>
 
                         </div>
+                        -->
                     </div>
                     <input id="file_url" type="file" class="form-control " id="exampleInputFile" aria-describedby="fileHelp" value="Agrega una Imagen" >
 

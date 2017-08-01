@@ -50,16 +50,13 @@ public class StoriesEntity extends BaseEntity{
 
 
     public boolean add(Story story){
-        String sql = "INSERT INTO stories(title, description, publication_date, user_id)" +
-                " VALUES(" +
-                story.getTitleAsValue() + ", " +
-                story.getDescriptionAsValue() + ", " +
-                " CURDATE()," +
-                " 2)";
+        String sql = "INSERT INTO stories(title, description, publication_date, user_id) " +
+                "VALUES(" +
+                        story.getTitleAsValue() + ", " +
+                        story.getDescriptionAsValue() + ", " +
+                        "CURDATE(), " +
+                        story.getUser().getIdAsString() + ")";
         return change(sql);
     }
-
-
-
 
 }

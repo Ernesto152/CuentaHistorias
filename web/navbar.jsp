@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="bootstrap.jsp"/>
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -40,26 +41,11 @@
                                                 <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                                                 <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                                             </div>
-                                            o
-                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                <div class="form-group">
-                                                    <label class="sr-only" for="exampleInputEmail2">Email</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Correo electrónico" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="sr-only" for="exampleInputPassword2">Contraseña</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" required>
-                                                    <div class="help-block text-right"><a href="">¿Olvidaste tu contraseña?</a></div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> mantenerme conectado
-                                                    </label>
-                                                </div>
-                                            </form>
+                                            <s:form action="login" id="contact">
+                                                <s:textfield name="email" placeholder="Email" size="100%"/>
+                                                <s:password name="password" placeholder="Password" size="100%"/>
+                                                <s:submit cssClass="btn btn-primary" value="Iniciar sesión"/>
+                                            </s:form>
                                         </div>
                                         <div class="bottom text-center">
                                             ¿Nuevo aquí? <a href="signup.jsp"><b>Únete a nosotros</b></a>
