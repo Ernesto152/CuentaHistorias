@@ -29,31 +29,37 @@
                         <li><a href="write.jsp">Cuéntanos una</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><p class="navbar-text">¿Ya tienes una cuenta?</p></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Ingresa</b> <span class="caret"></span></a>
-                            <ul id="login-dp" class="dropdown-menu">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            Ingresar con
-                                            <div class="social-buttons">
-                                                <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                                                <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                        <s:if test="%{#session.user_id==null || #session.user_id==0}">
+                            <li><p class="navbar-text">¿Ya tienes una cuenta?</p></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Ingresa</b> <span class="caret"></span></a>
+                                <ul id="login-dp" class="dropdown-menu">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                Ingresar con
+                                                <div class="social-buttons">
+                                                    <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                                    <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                                </div>
+                                                <s:form action="login" id="contact">
+                                                    <s:textfield name="email" placeholder="Email" size="100%"/>
+                                                    <s:password name="password" placeholder="Password" size="100%"/>
+                                                    <s:submit cssClass="btn btn-primary" value="Iniciar sesión"/>
+                                                </s:form>
                                             </div>
-                                            <s:form action="login" id="contact">
-                                                <s:textfield name="email" placeholder="Email" size="100%"/>
-                                                <s:password name="password" placeholder="Password" size="100%"/>
-                                                <s:submit cssClass="btn btn-primary" value="Iniciar sesión"/>
-                                            </s:form>
+                                            <div class="bottom text-center">
+                                                ¿Nuevo aquí? <a href="signup.jsp"><b>Únete a nosotros</b></a>
+                                            </div>
                                         </div>
-                                        <div class="bottom text-center">
-                                            ¿Nuevo aquí? <a href="signup.jsp"><b>Únete a nosotros</b></a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
+                                    </li>
+                                </ul>
+                            </li>
+                        </s:if>
+                        <s:if test="%{#session.user_id>0}">
+                            <li><p class="navbar-text">Hola, <s:property value="#session.user_name"/></p></li>
+                            <li><a href="<s:url action="logout"/>">Salir</a></li>
+                        </s:if>
                     </ul>
                 </div>
             </div>

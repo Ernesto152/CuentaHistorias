@@ -118,4 +118,8 @@ public class CHDataStore {
     public List<Story> findAllStories() {
         return getStoriesEntity().findAll(getUsersEntity(), getSubscriptionsEntity(), getEnterprisesEntity());
     }
+
+    public List<Story> findTheLatestStories(){
+        return getStoriesEntity().findTheLatest(getUsersEntity(), getSubscriptionsEntity(), getEnterprisesEntity());
+    }
 }

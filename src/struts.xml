@@ -16,7 +16,7 @@
             <result name="error">pruebaStrutsWord.jsp</result>
         </action>
 
-        <action name="user" class="pe.edu.utp.cuentahistorias.actions.UserAction">
+        <action name="*User" class="pe.edu.utp.cuentahistorias.actions.UserAction" method="{1}">
             <result name="success">index.jsp</result>
             <result name="error">signup.jsp</result>
         </action>
@@ -26,6 +26,11 @@
         </action>
 
         <action name="login" class="pe.edu.utp.cuentahistorias.actions.UserAction" method="login">
+            <result name="success">index.jsp</result>
+            <result name="input">error.jsp</result>
+        </action>
+
+        <action name="logout" class="pe.edu.utp.cuentahistorias.actions.UserAction" method="logout">
             <result name="success">index.jsp</result>
             <result name="input">error.jsp</result>
         </action>

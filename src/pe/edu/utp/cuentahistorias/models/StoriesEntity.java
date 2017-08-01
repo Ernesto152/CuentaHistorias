@@ -27,6 +27,10 @@ public class StoriesEntity extends BaseEntity{
         return findByCriteria("", usersEntity, subscriptionsEntity, enterprisesEntity);
     }
 
+    public List<Story> findTheLatest(UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
+        return findByCriteria(" true ORDER BY publication_date DESC LIMIT 8", usersEntity, subscriptionsEntity, enterprisesEntity);
+    }
+
     public Story findById(int id, UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity, EnterprisesEntity enterprisesEntity){
         String criteria = " id = " + String.valueOf(id);
         return findByCriteria(criteria, usersEntity, subscriptionsEntity, enterprisesEntity).get(0);

@@ -9,14 +9,14 @@
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="bootstrap.jsp"/>
-<jsp:include page="navbar.jsp"/>
 <html>
 <head>
 </head>
 <body>
 <s:set var="user_id" value="id" scope="session"/>
+<s:set var="user_name" value="firstName" scope="session"/>
 <!---->
-
+<jsp:include page="navbar.jsp"/>
 <!-- Carousel
 ================================================== -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">

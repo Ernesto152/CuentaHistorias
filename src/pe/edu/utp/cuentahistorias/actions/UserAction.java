@@ -1,5 +1,6 @@
 package pe.edu.utp.cuentahistorias.actions;
 
+import com.opensymphony.xwork2.ActionSupport;
 import pe.edu.utp.cuentahistorias.models.*;
 import pe.edu.utp.cuentahistorias.services.CHService;
 
@@ -8,7 +9,7 @@ import java.sql.Date;
 /**
  * Created by usuario on 15/07/2017.
  */
-public class UserAction {
+public class UserAction extends ActionSupport {
     private int id;
     private String firstName;
     private String lastName;
@@ -100,20 +101,52 @@ public class UserAction {
         this.user = user;
     }
 
-    public String login(){
+    /*
+    public String add(){
+        user = new User(id, firstName, lastName, email, password, subscriptionStart, subscriptionRenovation, subscription);
         try {
-            CHService service = new CHService();
-            user = service.getUsersByEmail(email, password);
-            id = user.getId();
-            return "success";
+            PSService PSS = new PSService();
+            PSS.createUser(user);
+            return SUCCESS;
         }catch (Exception e){
             e.printStackTrace();
             return "input";
         }
     }
+     */
+    public String add(){
+        user = new User(id, firstName, lastName, email, password, subscriptionStart, subscriptionRenovation, subscription, enterprise);
+        try {
+            CHService service = new CHService();
+            service.createUser(user);
+            return SUCCESS;
+        }catch (Exception e){
+            e.printStackTrace();
+            return INPUT;
+        }
+    }
+
+    public String login(){
+        try {
+            CHService service = new CHService();
+            user = service.getUsersByEmail(email, password);
+            id = user.getId();
+            firstName = user.getFirstName();
+            return SUCCESS;
+        }catch (Exception e){
+            e.printStackTrace();
+            return INPUT;
+        }
+    }
+
+    public String logout(){
+        id = 0;
+        email = "";
+        return SUCCESS;
+    }
 
     public String execute(){
-            return "success";
+        return SUCCESS;
     }
 
 }

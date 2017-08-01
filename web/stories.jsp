@@ -34,7 +34,7 @@
 <b:container>
     <div class="row">
         <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>
-        <c:forEach var="story" items="${service.stories}">
+        <c:forEach var="story" items="${service.latestStories}">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="thumbnail">
                 <div class="row">

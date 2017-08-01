@@ -22,7 +22,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="container" id="container">
-                <s:form action="user" id="contact">
+                <s:form action="addUser" id="contact">
                     <h3>Regístrate</h3>
                     <h4>Únete a nosotros y experimenta</h4>
                     <s:textfield placeholder="Nombre" name="firstName" size="100%"/>
