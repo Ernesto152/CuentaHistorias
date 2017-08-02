@@ -57,8 +57,8 @@
                             </li>
                         </s:if>
                         <s:if test="%{#session.user_id>0}">
-                            <li><p class="navbar-text">Hola, <s:property value="#session.user_name"/></p></li>
-                            <li><a href="<s:url action="logout"/>">Salir</a></li>
+                            <li><p class="navbar-text">Hola, <s:property value="#session.user_name"/> </p></li>
+                            <li><a href="<s:url action="logout"/>"><span class="glyphicon glyphicon-log-out"></span>  Salir</a></li>
                         </s:if>
                     </ul>
                 </div>

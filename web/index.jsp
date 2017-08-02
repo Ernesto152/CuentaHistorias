@@ -99,8 +99,6 @@
         </div><!-- /.row -->
 
 
-        <!-- START THE FEATURETTES -->
-
         <hr class="featurette-divider" style="color: #000">
 
         <div class="row featurette">

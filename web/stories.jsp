@@ -20,14 +20,39 @@
             justify-content: center;
         }
     </style>
+
+    <style>
+        * {
+            margin: 0; padding: 0; border: 0 none; position: relative;
+        }
+        *, *:after, *:before {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            padding-left: 10px;
+        }
+        p{
+            max-height: 6rem;
+            overflow: hidden;
+            text-align: justify;
+
+        }
+        p:after{
+            content:'Ver mas...';
+            color: #0f4bac;
+            background: #ffffff;
+            position: absolute;
+            top: 4rem;
+            right: 0;
+        }
+    </style>
 </head>
 <body>
 
 <b:container>
     <b:jumbotron tittle="Sample">
         <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
+        <h3>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</h3>
+        <h3>To see the difference between static and fixed top navbars, just scroll.</h3>
     </b:jumbotron>
 </b:container>
 
@@ -38,22 +63,26 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="thumbnail">
                 <div class="row">
-                    <a href="detail.jsp">
-                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
-                        <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
+                            <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
 
-                    </div></a>
-                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                        <div class="caption">
-                            <h3><c:out value="${story.title}"/></h3>
-                            <p><c:out value="${story.description}"/></p>
-                            <p>
-                                <img class="img-circle" src='img/imgPhoto/${story.user.firstName}.png' alt="Generic placeholder image" width="40" height="40">
-                                <strong><c:out value="${story.user.firstName}"/> <c:out value="${story.user.lastName}"/> </strong>
-
-                            </p>
                         </div>
-                    </div>
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                            <div class="caption">
+                                <h3><c:out value="${story.title}"/></h3>
+                                <a href="detail.jsp">
+                                    <div>
+                                        <p>
+                                            <c:out value="${story.description}"/>
+                                        </p>
+                                    </div>
+                                </a>
+                                <p>
+                                    <img class="img-circle" src='img/imgPhoto/${story.user.firstName}.png' alt="Generic placeholder image" width="40" height="40">
+                                    <strong><c:out value="${story.user.firstName}"/> <c:out value="${story.user.lastName}"/> </strong>
+                                </p>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
