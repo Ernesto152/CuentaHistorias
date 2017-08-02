@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 
@@ -26,22 +27,16 @@
                         <h5><strong>Author, Author</strong>  <span class="label label-info">Level 5</span></h5>
                     </div>
                     <div class="row">
-                        <h6>Jul 5 2017</h6>
+                        <h6><s:property value="publicationDate"/></h6>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <h2 class="header-panel">Title</h2>
+                <h2 class="header-panel"><s:property value="title"/></h2>
                 <p class="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eaque eius illo in,
-                    magnam modi necessitatibus nostrum quam? Ab consequatur dolores eos inventore ipsum
-                    natus odit quae quo rerum, sapiente.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eaque eius illo in,
-                    magnam modi necessitatibus nostrum quam? Ab consequatur dolores eos inventore ipsum
-                    natus odit quae quo rerum, sapiente.
+                    <s:property value="description"/>
                 </p>
             </div>
-
 
             <div style="padding-bottom: 30px">
                 <h3 class="header-panel">Coments</h3>

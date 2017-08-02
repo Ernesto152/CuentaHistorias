@@ -108,4 +108,19 @@ public class StoryAction extends ActionSupport {
             return INPUT;
         }
     }
+
+    public String details(){
+        try {
+            CHService service = new CHService();
+            story = service.getStoriesById(id);
+            id = story.getId();
+            title = story.getTitle();
+            description = story.getDescription();
+            publicationDate = story.getPublicationDate();
+            return SUCCESS;
+        }catch (Exception e) {
+            e.printStackTrace();
+            return INPUT;
+        }
+    }
 }

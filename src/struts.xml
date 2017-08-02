@@ -35,5 +35,9 @@
             <result name="input">error.jsp</result>
         </action>
 
+        <action name="detailsStory" class="pe.edu.utp.cuentahistorias.actions.StoryAction" method="details">
+            <result name="success">detail.jsp</result>
+            <result name="input">stories.jsp</result>
+        </action>
     </package>
 </struts>

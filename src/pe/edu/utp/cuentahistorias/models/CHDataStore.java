@@ -111,6 +111,10 @@ public class CHDataStore {
         return storiesEntity;
     }
 
+    public Story findStoriesById(int id){
+        return getStoriesEntity().findById(id, getUsersEntity(), getSubscriptionsEntity(), getEnterprisesEntity());
+    }
+
     public boolean createStory(Story story) {
         return getStoriesEntity().add(story);
     }

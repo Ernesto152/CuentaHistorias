@@ -70,7 +70,10 @@
                         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                             <div class="caption">
                                 <h3><c:out value="${story.title}"/></h3>
-                                <a href="detail.jsp">
+                                <a href="<s:url action="detailsStory">
+                                    <s:param name="id">
+                                        <c:out value="${story.id}"/>
+                                    </s:param></s:url>">
                                     <div>
                                         <p>
                                             <c:out value="${story.description}"/>

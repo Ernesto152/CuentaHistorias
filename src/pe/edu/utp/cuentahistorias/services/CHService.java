@@ -91,6 +91,10 @@ public class CHService {
         return getDataStore().findTheLatestStories();
     }
 
+    public Story getStoriesById(int id){
+        return getDataStore().findStoriesById(id);
+    }
+
     /*---------------------SUBSCRIPTIONS---------------------------------*/
     public Subscription getSubscriptionsById(int id){
         return getDataStore().findSubscriptionsById(id);
