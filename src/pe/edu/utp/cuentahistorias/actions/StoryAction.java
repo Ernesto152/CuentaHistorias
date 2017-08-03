@@ -117,6 +117,7 @@ public class StoryAction extends ActionSupport {
             title = story.getTitle();
             description = story.getDescription();
             publicationDate = story.getPublicationDate();
+            user = story.getUser().getId();
             return SUCCESS;
         }catch (Exception e) {
             e.printStackTrace();

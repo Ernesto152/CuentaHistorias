@@ -7,7 +7,7 @@ import java.sql.SQLException;
 /**
  * Created by usuario on 17/06/2017.
  */
-public class    User {
+public class User {
     private int id;
     private String firstName;
     private String lastName;
@@ -15,10 +15,11 @@ public class    User {
     private String password;
     private Date subscriptionStart;
     private Date subscriptionRenovation;
+    private int level;
     private Subscription subscription;
     private Enterprise enterprise;
 
-    public User(int id, String firstName, String lastName, String email, String password, Date subscriptionStart, Date subscriptionRenovation, Subscription subscription, Enterprise enterprise) {
+    public User(int id, String firstName, String lastName, String email, String password, Date subscriptionStart, Date subscriptionRenovation, int level, Subscription subscription, Enterprise enterprise) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,6 +27,7 @@ public class    User {
         this.password = password;
         this.subscriptionStart = subscriptionStart;
         this.subscriptionRenovation = subscriptionRenovation;
+        this.level = level;
         this.subscription = subscription;
         this.enterprise = enterprise;
     }
@@ -125,6 +127,19 @@ public class    User {
         return this;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public String getLevelAsString(){
+        return String.valueOf(getLevel());
+    }
+
+    public User setLevel(int level) {
+        this.level = level;
+        return this;
+    }
+
     public Subscription getSubscription() {
         return subscription;
     }
@@ -161,6 +176,7 @@ public class    User {
                     .setPassword(resultSet.getString("password"))
                     .setSubscriptionStart(resultSet.getDate("subscription_start"))
                     .setSubscriptionRenovation(resultSet.getDate("subscription_renovation"))
+                    .setLevel(resultSet.getInt("level"))
                     .setSubscription(subscriptionsEntity.findById(resultSet.getInt("subscription_id")))
                     .setEnterprise(enterprisesEntity.findById(resultSet.getInt("enterprise_id"), subscriptionsEntity));
         } catch (SQLException e) {

@@ -17,6 +17,7 @@ public class UserAction extends ActionSupport {
     private String password;
     private Date subscriptionStart;
     private Date subscriptionRenovation;
+    private int level;
     private Subscription subscription;
     private Enterprise enterprise;
     private User user;
@@ -77,6 +78,14 @@ public class UserAction extends ActionSupport {
         this.subscriptionRenovation = subscriptionRenovation;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
     public Subscription getSubscription() {
         return subscription;
     }
@@ -101,21 +110,12 @@ public class UserAction extends ActionSupport {
         this.user = user;
     }
 
-    /*
-    public String add(){
-        user = new User(id, firstName, lastName, email, password, subscriptionStart, subscriptionRenovation, subscription);
-        try {
-            PSService PSS = new PSService();
-            PSS.createUser(user);
-            return SUCCESS;
-        }catch (Exception e){
-            e.printStackTrace();
-            return "input";
-        }
+    public String execute(){
+        return SUCCESS;
     }
-     */
+
     public String add(){
-        user = new User(id, firstName, lastName, email, password, subscriptionStart, subscriptionRenovation, subscription, enterprise);
+        user = new User(id, firstName, lastName, email, password, subscriptionStart, subscriptionRenovation, level, subscription, enterprise);
         try {
             CHService service = new CHService();
             service.createUser(user);
@@ -132,6 +132,7 @@ public class UserAction extends ActionSupport {
             user = service.getUsersByEmail(email, password);
             id = user.getId();
             firstName = user.getFirstName();
+            lastName = user.getLastName();
             return SUCCESS;
         }catch (Exception e){
             e.printStackTrace();
@@ -144,9 +145,4 @@ public class UserAction extends ActionSupport {
         email = "";
         return SUCCESS;
     }
-
-    public String execute(){
-        return SUCCESS;
-    }
-
 }

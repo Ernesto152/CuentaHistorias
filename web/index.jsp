@@ -15,6 +15,7 @@
 <body>
 <s:set var="user_id" value="id" scope="session"/>
 <s:set var="user_name" value="firstName" scope="session"/>
+<s:set var="user_lastName" value="lastName" scope="session"/>
 <!---->
 <jsp:include page="navbar.jsp"/>
 <!-- Carousel

@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="bootstrap.jsp"/>
 <jsp:include page="navbar.jsp"/>
 
@@ -15,7 +16,9 @@
 <head>
 </head>
 <body>
+<s:set var="user_id" value="user" scope="session"/>
 <b:container>
+    <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>
     <div class="row" style="padding-top: 40px ">
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
@@ -24,7 +27,12 @@
             </div>
                 <div class="col-lg-11">
                     <div class="row">
-                        <h5><strong>Author, Author</strong>  <span class="label label-info">Level 5</span></h5>
+                        <c:forEach var="story" items="${service.stories}">
+                            <c:if test="${story.user.id eq user_id}">
+                                <h5><strong><c:out value="${story.user.firstName}"/> <c:out value="${story.user.lastName}"/>  </strong><span class="label label-info">Level <c:out value="${story.user.level}"/></span></h5>
+                            </c:if>
+                        <!--<h5><strong></strong>  <span class="label label-info">Level 5</span></h5>-->
+                        </c:forEach>
                     </div>
                     <div class="row">
                         <h6><s:property value="publicationDate"/></h6>

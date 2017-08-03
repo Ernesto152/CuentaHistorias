@@ -47,7 +47,6 @@
     </style>
 </head>
 <body>
-
 <b:container>
     <b:jumbotron tittle="Sample">
         <h1>Navbar example</h1>
