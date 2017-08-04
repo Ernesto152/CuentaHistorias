@@ -58,7 +58,7 @@ public class StoriesEntity extends BaseEntity{
                 "VALUES(" +
                         story.getTitleAsValue() + ", " +
                         story.getDescriptionAsValue() + ", " +
-                        "CURDATE(), " +
+                        "NOW(), " +
                         story.getUser().getIdAsString() + ")";
         return change(sql);
     }

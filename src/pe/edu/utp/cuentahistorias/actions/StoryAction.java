@@ -124,4 +124,15 @@ public class StoryAction extends ActionSupport {
             return INPUT;
         }
     }
+
+    /*
+    public String confrontation(){
+        try {
+            return SUCCESS;
+        }catch (Exception e) {
+            e.printStackTrace();
+            return INPUT;
+        }
+    }
+    */
 }

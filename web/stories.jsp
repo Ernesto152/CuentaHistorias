@@ -60,7 +60,7 @@
         <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>
         <c:forEach var="story" items="${service.latestStories}">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="thumbnail">
+            <div class="thumbnail" style="height: 202px">
                 <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
                             <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
@@ -72,7 +72,7 @@
                                 <a href="<s:url action="detailsStory">
                                     <s:param name="id">
                                         <c:out value="${story.id}"/>
-                                    </s:param></s:url>">
+                                    </s:param></s:url>" style="text-decoration: none; color: #2b2b2b">
                                     <div>
                                         <p>
                                             <c:out value="${story.description}"/>

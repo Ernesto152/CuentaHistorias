@@ -39,5 +39,10 @@
             <result name="success">detail.jsp</result>
             <result name="input">stories.jsp</result>
         </action>
+
+        <action name="confrontation" class="pe.edu.utp.cuentahistorias.actions.StoryAction" method="details">
+            <result name="success">challenge.jsp</result>
+            <result name="input">detail.jsp</result>
+        </action>
     </package>
 </struts>

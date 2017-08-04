@@ -16,7 +16,7 @@
 <head>
 </head>
 <body>
-<s:set var="user_id" value="user" scope="session"/>
+<s:set var="story_user_id" value="user" scope="session"/>
 <b:container>
     <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>
     <div class="row" style="padding-top: 40px ">
@@ -28,10 +28,9 @@
                 <div class="col-lg-11">
                     <div class="row">
                         <c:forEach var="story" items="${service.stories}">
-                            <c:if test="${story.user.id eq user_id}">
+                            <c:if test="${story.user.id eq story_user_id}">
                                 <h5><strong><c:out value="${story.user.firstName}"/> <c:out value="${story.user.lastName}"/>  </strong><span class="label label-info">Level <c:out value="${story.user.level}"/></span></h5>
                             </c:if>
-                        <!--<h5><strong></strong>  <span class="label label-info">Level 5</span></h5>-->
                         </c:forEach>
                     </div>
                     <div class="row">
@@ -45,7 +44,9 @@
                     <s:property value="description"/>
                 </p>
             </div>
-
+            <a href="<s:url action="confrontation"><s:param name="id"><s:property value="id"/></s:param></s:url>"
+               class="btn btn-danger">Retar
+            </a>
             <div style="padding-bottom: 30px">
                 <h3 class="header-panel">Coments</h3>
             </div>
