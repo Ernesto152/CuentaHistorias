@@ -76,10 +76,13 @@
                 <div class="panel-body">
                     <s:form action="addStory" id="chat" name="formulario">
                         <s:hidden name="user" value="%{#session.user_id}"/>
-                        Título: <s:textfield class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%" onfocus="restaurar()"/>
-                        <s:textarea class="form-control" rows="5" size="100%" onfocus="restaurar()"/>
+                        Título: <s:textfield class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%"/>
+                        <s:textarea class="form-control" rows="5" size="100%"/>
                         <br>
-                        <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary" onclick="return encontrado()"/>
+                        <%--<s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary" onclick="return encontrado()"/>--%>
+                        <a href="<s:url action="confrontation"><s:param name="id"><s:property value="id"/></s:param></s:url>">
+                            <s:submit cssClass="btn btn-primary" value="Retar" class="btn btn-primary" onclick="return encontrado()"/>
+                        </a>
                     </s:form>
                 </div>
             </div>
@@ -88,4 +91,5 @@
 </b:container>
 <jsp:include page="footer.jsp"/>
 </body>
+<script type="text/javascript" src="js/filters.js"/>
 </html>

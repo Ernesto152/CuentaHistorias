@@ -63,8 +63,7 @@
             <div class="thumbnail" style="height: 202px">
                 <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 im">
-                            <img src="https://dummyimage.com/190x190/757075/ffffff.jpg&text=+">
-
+                            <img src="img/sin-imagen.png" width="190" height="190" style="background-color: #cecece">
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                             <div class="caption">

@@ -12,7 +12,7 @@
 <footer id="myFooter">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3 myCols">
+            <div class="col-sm-4 myCols">
                 <h5>Comenzar</h5>
                 <ul>
                     <li><a href="index.jsp">Home</a></li>
@@ -20,7 +20,7 @@
                     <li><a href="#">Downloads</a></li>
                 </ul>
             </div>
-            <div class="col-sm-3 myCols">
+            <div class="col-sm-4 myCols">
                 <h5>Sobre nosotros</h5>
                 <ul>
                     <li><a href="#">Información de la empresa</a></li>
@@ -28,7 +28,7 @@
                     <li><a href="#">Comentarios</a></li>
                 </ul>
             </div>
-            <div class="col-sm-3 myCols">
+            <div class="col-sm-4 myCols">
                 <h5>Legal</h5>
                 <ul>
                     <li><a href="#">Términos de Servicio</a></li>
