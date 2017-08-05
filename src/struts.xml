@@ -44,5 +44,9 @@
             <result name="success">challenge.jsp</result>
             <result name="input">detail.jsp</result>
         </action>
+
+        <action name="addComment" class="pe.edu.utp.cuentahistorias.actions.CommentAction">
+            <result name="success">detail.jsp</result>
+        </action>
     </package>
 </struts>

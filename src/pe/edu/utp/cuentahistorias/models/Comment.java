@@ -1,6 +1,8 @@
 package pe.edu.utp.cuentahistorias.models;
 
 import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * Created by will on 17/06/2017.
@@ -28,6 +30,9 @@ public class Comment {
         return id;
     }
 
+    public String getIdAsString(){
+        return String.valueOf(getId());
+    }
     public Comment setId(int id) {
         this.id = id;
         return this;
@@ -37,14 +42,21 @@ public class Comment {
         return description;
     }
 
+    public String getDescriptionAsValue(){
+        return "'" + getDescription() + "'";
+    }
+
     public Comment setDescription(String description) {
         this.description = description;
         return this;
     }
 
-
     public Date getPublicationDate() {
         return publicationDate;
+    }
+
+    public String getPublicationDateAsValue(){
+        return "'" + getPublicationDate() + "'";
     }
 
     public Comment setPublicationDate(Date publicationDate) {
@@ -68,5 +80,20 @@ public class Comment {
     public Comment setStory(Story story) {
         this.story = story;
         return this;
+    }
+
+    public static Comment build(ResultSet resultSet, UsersEntity usersEntity, SubscriptionsEntity subscriptionsEntity,
+                                EnterprisesEntity enterprisesEntity, StoriesEntity storiesEntity){
+        try{
+            return (new Comment())
+                    .setId(resultSet.getInt("id"))
+                    .setDescription(resultSet.getString("description"))
+                    .setPublicationDate(resultSet.getDate("publication_date"))
+                    .setUser(usersEntity.findById(resultSet.getInt("user_id"), subscriptionsEntity, enterprisesEntity))
+                    .setStory(storiesEntity.findById(resultSet.getInt("story_id"), usersEntity, subscriptionsEntity, enterprisesEntity));
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

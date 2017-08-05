@@ -14,13 +14,9 @@
 <link rel="stylesheet" href="../Resources/css/bootstrap.min.css">
 <html>
 <head>
-    <style>
-        body{
-            background-image: url("img/writer.jpg");
-        }
-    </style>
 </head>
-<body id="story">
+<body style="background-image: url(img/writer.jpg)">
+
 <b:container>
     <b:jumbotron tittle="Sample">
         <h1>Cuentanos tu historia</h1>
@@ -44,7 +40,7 @@
                             <form name="formu" action="story">
                                 <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>
                                 <c:forEach var="word"  items="${service.randomWords}" varStatus="record">
-                                    <input id="nombre" name="nombre" class="btn btn-sm btn-primary" value="${word.name}">
+                                    <input id="nombre" name="nombre" class="btn btn-sm btn-primary" value="${word.name}" readonly>
                                 </c:forEach>
 
                                 <jsp:useBean id="service2" class="pe.edu.utp.cuentahistorias.services.CHService"/>
@@ -89,11 +85,22 @@
                         </div>
                    <div class="panel-body">
                        <s:form action="addStory" id="chat" name="formulario">
-                           <s:hidden name="user" value="%{#session.user_id}"/>
-                           Título: <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%" onfocus="restaurar()"/>
-                           <s:textarea name="description" class="form-control" rows="5" size="100%" onfocus="restaurar()"/>
-                           <br>
-                           <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary" onclick="return encontrado()"/>
+                           <s:if test="%{#session.user_id==null || #session.user_id==0}">
+                               <div class="alert alert-warning">
+                                   <strong>¡Advertencia!</strong> Debes iniciar sesión para poder publicar una historia.
+                                   Si aún no tienes una cuenta, regístrate
+                                   <a href="signup.jsp" class="alert-link">
+                                       aquí
+                                   </a>
+                               </div>
+                           </s:if>
+                           <s:elseif test="%{#session.user_id>0}">
+                               <s:hidden name="user" value="%{#session.user_id}"/>
+                               Título: <s:textfield name="title" class="form-control" placeholder="¿Cómo desea titular su historia?" size="100%" onfocus="restaurar()"/>
+                               <s:textarea name="description" class="form-control" rows="5" size="100%" onfocus="restaurar()"/>
+                               <br>
+                                <s:submit cssClass="btn btn-primary" value="Publicar" class="btn btn-primary" onclick="return encontrado()"/>
+                           </s:elseif>
                        </s:form>
                        <!--
                             <form name="formulario"  id="chat" action="story" >
@@ -108,9 +115,9 @@
                         </div>
                         -->
                     </div>
-                    <input id="file_url" type="file" class="form-control " id="exampleInputFile" aria-describedby="fileHelp" value="Agrega una Imagen" >
+                    <%--<input id="file_url" type="file" class="form-control " id="exampleInputFile" aria-describedby="fileHelp" value="Agrega una Imagen" >
 
-                    <s:div id="vista_previa" class="form-control "></s:div>
+                    <s:div id="vista_previa" class="form-control "></s:div>--%>
                 </div>
             </div>
         </div>

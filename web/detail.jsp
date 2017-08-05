@@ -14,10 +14,12 @@
 
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
 <s:set var="story_user_id" value="user" scope="session"/>
-<b:container>
+<s:set var="story_id" value="id" scope="session"/>
+<div class="container">
     <jsp:useBean id="service" class="pe.edu.utp.cuentahistorias.services.CHService"/>
     <div class="row" style="padding-top: 40px ">
         <div class="col-md-8 col-md-offset-2">
@@ -47,9 +49,40 @@
             <a href="<s:url action="confrontation"><s:param name="id"><s:property value="id"/></s:param></s:url>"
                class="btn btn-danger">Retar
             </a>
+
             <div style="padding-bottom: 30px">
-                <h3 class="header-panel">Coments</h3>
+                <h3 class="header-panel">Comentarios</h3>
             </div>
+
+            <div class="row">
+                <div class="col-lg-1 center-block center-pill">
+                    <img class="img-circle" src="img/imgProject/profile.png" alt="Generic placeholder image" width="40" height="40">
+                    <p>Author</p>
+                </div>
+                <div class="col-lg-11">
+                    <div class="well">
+                        <s:form action="addComment" name="formulario">
+                           <s:if test="%{#session.user_id==null || #session.user_id==0}">
+                               <div class="alert alert-danger">
+                                   <strong>¡Error!</strong> Debes iniciar sesión para poder publicar una historia.
+                                   Si aún no tienes una cuenta, regístrate
+                                   <a href="signup.jsp" class="alert-link">
+                                       aquí
+                                   </a>
+                               </div>
+                           </s:if>
+                           <s:elseif test="%{#session.user_id>0}">
+                               <s:hidden name="user" value="%{#session.user_id}"/>
+                               <s:hidden name="id"/>
+                               <s:textarea name="descriptions" class="form-control" rows="2" size="100%"/>
+                               <br>
+                                <s:submit cssClass="btn btn-primary" value="Comentar" class="btn btn-primary"/>
+                           </s:elseif>
+                       </s:form>
+                    </div>
+                </div>
+            </div>
+            <!--
             <div class="row">
                 <div class="col-lg-1 center-block center-pill">
                     <img class="img-circle" src="img/imgProject/profile.png" alt="Generic placeholder image" width="40" height="40">
@@ -90,10 +123,10 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
-</b:container>
+</div>
 <jsp:include page="footer.jsp"/>
 </body>
 </html>

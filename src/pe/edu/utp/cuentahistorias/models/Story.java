@@ -35,6 +35,10 @@ public class Story {
         return id;
     }
 
+    public String getIdAsString(){
+        return String.valueOf(getId());
+    }
+
     public Story setId(int id) {
         this.id = id;
         return this;

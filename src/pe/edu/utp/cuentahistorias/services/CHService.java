@@ -95,6 +95,15 @@ public class CHService {
         return getDataStore().findStoriesById(id);
     }
 
+    /*------------COMMENTS-----------------------------------------------------------*/
+    public boolean createComment(Comment comment){
+        return getDataStore().createComments(comment);
+    }
+
+    public Comment getCommentsById(int id){
+        return getDataStore().findCommentsById(id);
+    }
+
     /*---------------------SUBSCRIPTIONS---------------------------------*/
     public Subscription getSubscriptionsById(int id){
         return getDataStore().findSubscriptionsById(id);

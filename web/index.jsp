@@ -105,10 +105,17 @@
         <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">Creación <span class="text-muted"></span></h2>
-                <p class="lead">.</p>
+                <p class="lead">
+                    La lectura es una actividad que consiste en interpretar y descifrar, mediante la vista,
+                    el valor fónico de una serie de signos escritos, ya sea mentalmente (en silencio) o en voz
+                    alta (oral). Esta actividad esta caracterizada por la traducción de símbolos o letras en palabras y
+                    frases dotadas de significado, una vez descifrado el símbolo se pasa a reproducirlo. La lectura
+                    es hacer posible la interpretación y comprensión de los materiales escritos, evaluarlos y usarlos
+                    para nuestras necesidades
+                </p>
             </div>
             <div class="col-md-5">
-                <img src="img/imgProject/creah2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
+                <img src="img/escribir.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
             </div>
         </div>
 
@@ -117,10 +124,13 @@
         <div class="row featurette">
             <div class="col-md-7 col-md-push-5">
                 <h2 class="featurette-heading">Lectura <span class="text-muted"></span></h2>
-                <p class="lead">.</p>
+                <p class="lead">La escritura es la forma en que fijamos, mediante un conjunto de signos gráficos, el lenguaje con
+                    el que hablamos. Es el modo en que los seremos humanos nos comunicamos y transmitimos información,
+                    ideas, conceptos, conocimiento o sentimientos de manera no oral desde hace miles de años.
+                </p>
             </div>
             <div class="col-md-5 col-md-pull-7">
-                <img src="img/imgProject/leer2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
+                <img src="img/leer.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">
             </div>
         </div>
 
@@ -129,7 +139,9 @@
         <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">Competencia <span class="text-muted"></span></h2>
-                <p class="lead"> .</p>
+                <p class="lead">Como competencia también nos referimos a la rivalidad que se crea entre dos o más personas o bandos
+                    cuando todas las partes pretenden lograr la misma cosa: “La competencia entre ellos es encarnizada”.
+                </p>
             </div>
             <div class="col-md-5">
                 <img src="img/imgProject/compiteh2.jpg" class="featurette-image img-responsive center-block" src="https://dummyimage.com/500x500/b3b3b3/ffffff.jpg&text=+">

@@ -13,6 +13,7 @@ public class CHDataStore {
     private StoriesEntity storiesEntity;
     private SubscriptionsEntity subscriptionsEntity;
     private EnterprisesEntity enterprisesEntity;
+    private CommentsEntity commentsEntity;
 
     public CHDataStore(Connection connection) {
         this.connection = connection;
@@ -125,5 +126,20 @@ public class CHDataStore {
 
     public List<Story> findTheLatestStories(){
         return getStoriesEntity().findTheLatest(getUsersEntity(), getSubscriptionsEntity(), getEnterprisesEntity());
+    }
+    /*--------------COMMENTS-------------------------------------------------------*/
+    private CommentsEntity getCommentsEntity(){
+        if (commentsEntity == null){
+            commentsEntity = new CommentsEntity(getConnection());
+        }
+        return commentsEntity;
+    }
+
+    public Comment findCommentsById(int id){
+        return getCommentsEntity().findById(id, getUsersEntity(), getSubscriptionsEntity(), getEnterprisesEntity(), getStoriesEntity());
+    }
+
+    public boolean createComments(Comment comment){
+        return getCommentsEntity().add(comment);
     }
 }
